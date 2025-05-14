@@ -1,0 +1,22 @@
+{
+  "login-credentials": {
+    "username": "Account@1.com",
+    "password": "Mnbvcxz@2"
+  },
+  "customer-names": {
+    "customer1": {
+      "name": "Sauce Labs Backpack",
+      "phoneNumber": "97348900"
+    },
+    "user2": {
+      "name": "Sauce Labs Bike Light",
+      "phoneNumber": "97895644"
+    }
+  },
+  "information-form": {
+    "firstName": "testFirst_",
+    "lastName": "testSecond_",
+    "postalCode": "12345"
+  },
+  "confirmation-message": "Thank you for your order!"
+}
