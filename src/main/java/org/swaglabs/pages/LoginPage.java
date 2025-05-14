@@ -53,9 +53,21 @@ public class LoginPage {
         ElementActions.clickElement(driver, signInButton);
         return this;
     }
-@Step("Get Error Message")
+    /**
+     * Retrieves the error message text from the error message element
+     * @return error message text
+     */
+    @Step("Get Error Message")
     public String getErrorMessage() {
         return ElementActions.getText(driver, errorMessage);
+    }
+
+    @Step("Login")
+    public LoginPage login(String email, String password) {
+        enterUserName(email);
+        enterPassword(password);
+        clickLoginButton();
+        return this;
     }
 
 
@@ -64,6 +76,8 @@ public class LoginPage {
     public LoginPage assertAfterLoginPageUrl() {
         CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver), getPropertyValue("homeURL"),
                 "The URL is Right");
+        CustomSoftAssertion.softAssertion.assertAll();
+
         return this;
     }
    /* @Step("Assert Login Page Title")

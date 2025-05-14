@@ -65,6 +65,7 @@ public class HomePage {
         ElementActions.clickElement(driver,selectBlock);
         ElementActions.clickElement(driver,Street);
         ElementActions.clickElement(driver,selectStreet);
+        ElementActions.clickElement(driver,pickup);
         return this;
     }
     public HomePage fillDeliveryTask()
