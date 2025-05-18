@@ -10,10 +10,7 @@ public class AllureUtils {
     public static final String ALLURE_RESULTS_PATH = "test-outputs/allure-results";
     static String REPORT_PATH = "test-outputs/allure-report";
     static String USER_HOME = System.getProperty("user.home");
-    static String ALLURE_PATH = USER_HOME + File.separator + ".m2" + File.separator + "repository"
-            + File.separator + "allure" + File.separator + "allure-2.33.0" + File.separator
-            + "bin" + File.separator + "allure";
-
+    static String ALLURE_PATH = "C:\\Users\\Mostafa.AbdelShafy\\scoop\\apps\\allure\\current\\bin\\allure";
     private AllureUtils() {
         super();
     }

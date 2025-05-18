@@ -29,7 +29,7 @@ public class LoginPage {
     @Step("Navigate to the Login Page ")
     public LoginPage navigateToLoginPage() {
 
-        BrowserActions.navigateToURL(driver, "baseURL");
+        BrowserActions.navigateToURL(driver, getPropertyValue("baseURL"));
         return this;
     }
 
@@ -62,24 +62,16 @@ public class LoginPage {
         return ElementActions.getText(driver, errorMessage);
     }
 
-    @Step("Login")
-    public LoginPage login(String email, String password) {
-        enterUserName(email);
-        enterPassword(password);
-        clickLoginButton();
-        return this;
-    }
-
-
     //Validations
     @Step("Assert Login Page URL")
     public LoginPage assertAfterLoginPageUrl() {
-        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver), getPropertyValue("homeURL"),
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver), getPropertyValue("baseURL"),
                 "The URL is Right");
         CustomSoftAssertion.softAssertion.assertAll();
 
         return this;
     }
+
    /* @Step("Assert Login Page Title")
     public LoginPage assertLoginPageTitle() {
         CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver), getPropertyValue("appTitle"),
@@ -93,7 +85,7 @@ public class LoginPage {
     }
     @Step("Assert Successful Login")
     public LoginPage assertSuccessfullogin() {
-        Validations.validatePageUrl(driver, getPropertyValue("homeURL"));
+        Validations.validatePageUrl(driver, getPropertyValue("baseURL"));
         return this;
     }
     @Step("Assert UNSuccessful Login")

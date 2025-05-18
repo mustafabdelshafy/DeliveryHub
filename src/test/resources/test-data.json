@@ -4,14 +4,23 @@
     "password": "Mnbvcxz@2"
   },
   "customer-names": {
-    "customer1": {
+    "user1": {
       "name": "Sauce Labs Backpack",
-      "phoneNumber": "97348900"
+      "phoneNumber": "97348900",
+      "building": "455",
+      "floor": "2",
+      "flat": "9"
     },
     "user2": {
       "name": "Sauce Labs Bike Light",
-      "phoneNumber": "97895644"
+      "phoneNumber": "97895644",
+      "building": "123",
+      "floor": "1",
+      "flat": "1"
     }
+  },
+  "file-upload": {
+    "filePath": "C:/Users/Mostafa.AbdelShafy/OneDrive - Link Development/Work Items/Link Dev/CITC_Regulation/Test Data/Valid/Satellite Internet Draft.pdf"
   },
   "information-form": {
     "firstName": "testFirst_",

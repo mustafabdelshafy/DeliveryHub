@@ -31,7 +31,7 @@ public class Waits {
 
     // wait for element to be clickable
     public static WebElement waitForElementClickable(WebDriver driver, By locator) {
-        return new WebDriverWait(driver, Duration.ofSeconds(10))
+        return new WebDriverWait(driver, Duration.ofSeconds(15))
                 .until(driver1 -> {
                     WebElement element = waitForElementVisible(driver, locator);
                     return element.isEnabled() ? element : null;
