@@ -39,6 +39,7 @@ public class HomePage {
     private final By fileInput=By.id("file-inputpickup0");
     private final By fileInput2=By.id("file-inputdelivery0");
     private final By createTaskButton=By.cssSelector("button.create-task-btn");
+    private final By AccountName=By.xpath("(//span[contains(text(),'Account 1')])[2]");
 
 
 
@@ -119,6 +120,14 @@ public class HomePage {
     {
         LogsUtil.info("Clicking on Creating Task Button");
         ElementActions.clickElement(driver,createTaskButton);
+        return this;
+    }
+    public HomePage checkAccountName()
+    {
+        String actualValue=ElementActions.getText(driver,AccountName);
+        LogsUtil.info("Actual value: "+actualValue);
+        Validations.validateEquals(actualValue,"Account 1","Account name not matched");
+        LogsUtil.info("Account name matched");
         return this;
     }
    /* public HomePage assertProductAddedToCart(String productName)

@@ -5,6 +5,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.WebDriver;
 import org.swaglabs.drivers.DriverManager;
+import org.swaglabs.drivers.GUIDriver;
 import org.swaglabs.listeners.TestNGListeners;
 import org.swaglabs.pages.HomePage;
 import org.swaglabs.pages.LoginPage;
@@ -25,7 +26,8 @@ public class E2e {
     @BeforeClass
     public void setUp() {
         testData = new JsonUtils("test-data");
-        driver = DriverManager.createInstance(getPropertyValue("browserType"));
+        new  GUIDriver(getPropertyValue("browserType"));
+        driver = GUIDriver.getInstance();
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
     }
@@ -54,7 +56,7 @@ public class E2e {
                 .clickingCreateOrder()
                 .fillPickupTask(customerName1, customerPhone1, filePath)
                 .fillDeliveryTask(customerName2, customerPhone2, filePath)
-                .clickCreateTaskButton();
+                .clickCreateTaskButton().checkAccountName();
     }
 
     // Clean up:

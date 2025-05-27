@@ -44,7 +44,7 @@ public class GUIDriver {
 
     }
 
-    private void setDriver(WebDriver driver) {
+    public static void setDriver(WebDriver driver) {
         driverThreadLocal.set(driver);
     }
 
