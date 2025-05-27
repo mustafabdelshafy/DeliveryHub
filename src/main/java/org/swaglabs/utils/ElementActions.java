@@ -50,5 +50,10 @@ public class ElementActions {
     {
         return driver.findElement(locator);
     }
+   /* public static WebElement waitForVisible(WebDriver driver, By locator, int timeoutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }*/
+
 
 }
