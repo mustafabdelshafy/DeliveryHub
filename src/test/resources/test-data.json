@@ -1,5 +1,6 @@
 {
   "login-credentials": {
+<<<<<<< HEAD
     "username": "standard_user",
     "password": "secret_sauce"
   },
@@ -13,6 +14,30 @@
       "price": "$9.99"
     }
   },
+=======
+    "username": "Account@1.com",
+    "password": "Mnbvcxz@2"
+  },
+  "customer-names": {
+    "user1": {
+      "name": "Sauce Labs Backpack",
+      "phoneNumber": "97348900",
+      "building": "455",
+      "floor": "2",
+      "flat": "9"
+    },
+    "user2": {
+      "name": "Sauce Labs Bike Light",
+      "phoneNumber": "97895644",
+      "building": "123",
+      "floor": "1",
+      "flat": "1"
+    }
+  },
+  "file-upload": {
+    "filePath": "C:/Users/Mostafa.AbdelShafy/OneDrive - Link Development/Work Items/Link Dev/CITC_Regulation/Test Data/Valid/Satellite Internet Draft.pdf"
+  },
+>>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
   "information-form": {
     "firstName": "testFirst_",
     "lastName": "testSecond_",
