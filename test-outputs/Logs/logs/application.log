@@ -1,43 +1,144 @@
-[ERROR] 2025-05-27 00:00:15.781 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-27 00:00:15.831 [main] TestNGListeners - Test case createOrder failed
-[INFO] 2025-05-27 00:00:15.905 [main] TestNGListeners - Test Execution finished
-[INFO] 2025-05-27 00:00:18.435 [main] TerminalUtils - Command executed successfully: C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report clean --single-file
-[INFO] 2025-05-27 00:00:18.437 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-27 00:00:18.437 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[INFO] 2025-05-27 00:00:32.130 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-27-00-00-18.html
-[DEBUG] 2025-05-27 00:03:38.706 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-27 00:03:40.460 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-27 00:03:40.501 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-27 00:03:40.626 [main] Utils - [TestNG] Running:
+[DEBUG] 2025-05-30 18:09:25.972 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+[INFO] 2025-05-30 18:09:28.403 [main] TestNGListeners - Test Execution started
+[INFO] 2025-05-30 18:09:28.474 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-05-30 18:09:28.883 [main] Utils - [TestNG] Running:
   C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
 
-[INFO] 2025-05-27 00:03:55.653 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
-[DEBUG] 2025-05-27 00:03:55.959 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-27 00:03:55.976 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
-[DEBUG] 2025-05-27 00:03:56.501 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-27 00:03:56.501 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
-[INFO] 2025-05-27 00:03:57.665 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
-[ERROR] 2025-05-27 00:03:58.269 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-27 00:03:58.862 [main] TestNGListeners - Test case loginTest passed
-[DEBUG] 2025-05-27 00:03:58.877 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
-[INFO] 2025-05-27 00:03:58.877 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[DEBUG] 2025-05-27 00:03:58.877 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
-[INFO] 2025-05-27 00:03:58.877 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
-[DEBUG] 2025-05-27 00:03:58.881 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
-[INFO] 2025-05-27 00:03:58.881 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
-[DEBUG] 2025-05-27 00:03:58.881 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
-[INFO] 2025-05-27 00:03:58.881 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
-[INFO] 2025-05-27 00:03:58.951 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
-[INFO] 2025-05-27 00:03:58.951 [main] HomePage - Clicking on Create order
-[INFO] 2025-05-27 00:04:06.070 [main] HomePage - Filling the pickup task form
-[INFO] 2025-05-27 00:04:33.871 [main] HomePage - Filling the delivery task form
-[INFO] 2025-05-27 00:04:47.399 [main] HomePage - Clicking on Creating Task Button
-[INFO] 2025-05-27 00:05:16.060 [main] HomePage - Actual value: Account 1
-[INFO] 2025-05-27 00:05:16.087 [main] HomePage - Account name matched
-[ERROR] 2025-05-27 00:05:16.396 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-27 00:05:16.405 [main] TestNGListeners - Test case createOrder passed
-[INFO] 2025-05-27 00:05:16.438 [main] TestNGListeners - Test Execution finished
-[INFO] 2025-05-27 00:05:18.419 [main] TerminalUtils - Command executed successfully: C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report clean --single-file
-[INFO] 2025-05-27 00:05:18.420 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-27 00:05:18.421 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[INFO] 2025-05-27 00:05:23.738 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-27-00-05-18.html
+[INFO] 2025-05-30 18:09:44.469 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-05-30 18:09:44.707 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-05-30 18:09:44.734 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-05-30 18:09:45.379 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-05-30 18:09:45.379 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-05-30 18:09:46.237 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-05-30 18:09:46.611 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:09:47.171 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-05-30 18:09:47.210 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-05-30 18:09:47.214 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-05-30 18:09:47.214 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-05-30 18:09:47.220 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-05-30 18:09:47.222 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-05-30 18:09:47.222 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-05-30 18:09:47.223 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-05-30 18:09:47.227 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[INFO] 2025-05-30 18:09:47.641 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-05-30 18:09:47.641 [main] HomePage - Clicking on Create order
+[INFO] 2025-05-30 18:09:50.620 [main] HomePage - Filling the pickup task form
+[INFO] 2025-05-30 18:10:08.631 [main] HomePage - Filling the delivery task form
+[INFO] 2025-05-30 18:10:21.661 [main] HomePage - Clicking on Creating Task Button
+[INFO] 2025-05-30 18:10:25.157 [main] HomePage - Actual value: Account 1
+[INFO] 2025-05-30 18:10:25.179 [main] HomePage - Account name matched
+[ERROR] 2025-05-30 18:10:25.544 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:10:25.554 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-05-30 18:10:25.595 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-05-30 18:10:32.181 [main] TerminalUtils - Command executed successfully: C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report clean --single-file
+[INFO] 2025-05-30 18:10:32.186 [main] AllureUtils - Allure report generated successfully on Windows
+[ERROR] 2025-05-30 18:10:32.187 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
+[INFO] 2025-05-30 18:10:55.341 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-10-32.html
+[DEBUG] 2025-05-30 18:15:37.927 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+[INFO] 2025-05-30 18:15:40.954 [main] TestNGListeners - Test Execution started
+[INFO] 2025-05-30 18:15:41.050 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-05-30 18:15:41.442 [main] Utils - [TestNG] Running:
+  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+
+[INFO] 2025-05-30 18:16:07.579 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-05-30 18:16:08.267 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-05-30 18:16:08.352 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-05-30 18:16:09.130 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-05-30 18:16:09.131 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-05-30 18:16:11.244 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-05-30 18:16:12.025 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:16:13.033 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-05-30 18:16:13.063 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-05-30 18:16:13.065 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-05-30 18:16:13.074 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-05-30 18:16:13.171 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-05-30 18:16:13.172 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-05-30 18:16:13.174 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-05-30 18:16:13.175 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-05-30 18:16:13.177 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[INFO] 2025-05-30 18:16:13.433 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-05-30 18:16:13.434 [main] HomePage - Clicking on Create order
+[INFO] 2025-05-30 18:16:16.724 [main] HomePage - Filling the pickup task form
+[INFO] 2025-05-30 18:16:41.229 [main] HomePage - Filling the delivery task form
+[INFO] 2025-05-30 18:17:02.126 [main] HomePage - Clicking on Creating Task Button
+[INFO] 2025-05-30 18:17:05.711 [main] HomePage - Actual value: Account 1
+[INFO] 2025-05-30 18:17:05.735 [main] HomePage - Account name matched
+[ERROR] 2025-05-30 18:17:06.150 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:17:06.168 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-05-30 18:17:06.328 [main] TestNGListeners - Test Execution finished
+[ERROR] 2025-05-30 18:17:06.366 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\2.33.0\bin.bat": CreateProcess error=2, The system cannot find the file specified
+[INFO] 2025-05-30 18:17:06.367 [main] AllureUtils - Allure report generated successfully on Windows
+[ERROR] 2025-05-30 18:17:06.369 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
+[INFO] 2025-05-30 18:17:19.976 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-17-06.html
+[DEBUG] 2025-05-30 18:19:05.991 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+[INFO] 2025-05-30 18:19:07.745 [main] TestNGListeners - Test Execution started
+[INFO] 2025-05-30 18:19:07.792 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-05-30 18:19:08.063 [main] Utils - [TestNG] Running:
+  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+
+[INFO] 2025-05-30 18:19:22.013 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-05-30 18:19:22.337 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-05-30 18:19:22.348 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-05-30 18:19:23.281 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-05-30 18:19:23.284 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-05-30 18:19:24.246 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-05-30 18:19:24.610 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:19:25.303 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-05-30 18:19:25.320 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-05-30 18:19:25.321 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-05-30 18:19:25.321 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-05-30 18:19:25.322 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-05-30 18:19:25.322 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-05-30 18:19:25.323 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-05-30 18:19:25.324 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-05-30 18:19:25.325 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[INFO] 2025-05-30 18:19:25.543 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-05-30 18:19:25.544 [main] HomePage - Clicking on Create order
+[INFO] 2025-05-30 18:19:28.522 [main] HomePage - Filling the pickup task form
+[INFO] 2025-05-30 18:19:46.409 [main] HomePage - Filling the delivery task form
+[INFO] 2025-05-30 18:20:00.769 [main] HomePage - Clicking on Creating Task Button
+[INFO] 2025-05-30 18:20:03.635 [main] HomePage - Actual value: Account 1
+[INFO] 2025-05-30 18:20:03.653 [main] HomePage - Account name matched
+[ERROR] 2025-05-30 18:20:04.088 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:20:04.101 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-05-30 18:20:04.133 [main] TestNGListeners - Test Execution finished
+[ERROR] 2025-05-30 18:20:04.139 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\2.33.0\bin.bat": CreateProcess error=2, The system cannot find the file specified
+[INFO] 2025-05-30 18:20:04.140 [main] AllureUtils - Allure report generated successfully on Windows
+[ERROR] 2025-05-30 18:20:04.141 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
+[INFO] 2025-05-30 18:20:10.684 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-20-04.html
+[DEBUG] 2025-05-30 18:34:37.786 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+[INFO] 2025-05-30 18:34:39.648 [main] TestNGListeners - Test Execution started
+[INFO] 2025-05-30 18:34:39.698 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-05-30 18:34:39.941 [main] Utils - [TestNG] Running:
+  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+
+[INFO] 2025-05-30 18:34:53.348 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-05-30 18:34:53.743 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-05-30 18:34:53.765 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-05-30 18:34:54.305 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-05-30 18:34:54.306 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-05-30 18:34:55.477 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-05-30 18:34:56.582 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:34:57.116 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-05-30 18:34:57.132 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-05-30 18:34:57.133 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-05-30 18:34:57.133 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-05-30 18:34:57.134 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-05-30 18:34:57.135 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-05-30 18:34:57.136 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-05-30 18:34:57.136 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-05-30 18:34:57.136 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[INFO] 2025-05-30 18:34:57.315 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-05-30 18:34:57.315 [main] HomePage - Clicking on Create order
+[INFO] 2025-05-30 18:35:00.312 [main] HomePage - Filling the pickup task form
+[INFO] 2025-05-30 18:35:18.858 [main] HomePage - Filling the delivery task form
+[INFO] 2025-05-30 18:35:32.539 [main] HomePage - Clicking on Creating Task Button
+[INFO] 2025-05-30 18:35:35.556 [main] HomePage - Actual value: Account 1
+[INFO] 2025-05-30 18:35:35.576 [main] HomePage - Account name matched
+[ERROR] 2025-05-30 18:35:35.877 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-05-30 18:35:35.889 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-05-30 18:35:35.923 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-05-30 18:35:42.177 [main] TerminalUtils - Command executed successfully: C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
+[INFO] 2025-05-30 18:35:42.177 [main] AllureUtils - Allure report generated successfully on Windows
+[INFO] 2025-05-30 18:35:42.247 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-05-30-18-35-42.html".
+[INFO] 2025-05-30 18:35:42.677 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-35-42.html
