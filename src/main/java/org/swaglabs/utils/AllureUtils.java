@@ -10,7 +10,10 @@ public class AllureUtils {
     public static final String ALLURE_RESULTS_PATH = "test-outputs/allure-results";
     static String REPORT_PATH = "test-outputs/allure-report";
     static String USER_HOME = System.getProperty("user.home");
-    static String ALLURE_PATH = "C:\\Users\\Mostafa.AbdelShafy\\scoop\\apps\\allure\\current\\bin\\allure";
+    static String ALLURE_PATH = USER_HOME + File.separator + "scoop" + File.separator + "apps" +
+            File.separator + "allure" + File.separator + "current" +
+            File.separator + "bin" + File.separator + "allure";
+
     private AllureUtils() {
         super();
     }
@@ -21,10 +24,10 @@ public class AllureUtils {
         if (PropertiesUtils.getPropertyValue("os.name").toLowerCase().contains("win")) //windows 11
         {
             String WIN = ALLURE_PATH + ".bat";
-            TerminalUtils.executeCommand(WIN, "generate", ALLURE_RESULTS_PATH, "-o", REPORT_PATH, "clean", "--single-file");
+            TerminalUtils.executeCommand(WIN, "generate", ALLURE_RESULTS_PATH, "-o", REPORT_PATH, "--clean", "--single-file");
             LogsUtil.info("Allure report generated successfully on Windows");
         } else {
-            TerminalUtils.executeCommand(ALLURE_PATH, "generate", ALLURE_RESULTS_PATH, "-o", REPORT_PATH, "clean", "--single-file");
+            TerminalUtils.executeCommand(ALLURE_PATH, "generate", ALLURE_RESULTS_PATH, "-o", REPORT_PATH, "--clean", "--single-file");
             LogsUtil.info("Allure report generated successfully on " + PropertiesUtils.getPropertyValue("os.name"));
         }
 
