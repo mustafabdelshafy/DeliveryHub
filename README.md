@@ -74,22 +74,6 @@ DeliveryHub/
 └── README.md                   # This file
 ```
 
-🏗️ Utility Layer Breakdown
-Utility Class	Responsibility
-AllureUtils	Enhanced Allure attachments
-BrowserActions	Browser-level operations
-CustomSoftAssertion	Soft assertion implementation
-ElementActions	WebElement interaction patterns
-FilesUtils	File system operations
-JsonUtils	JSON test data processing
-LogsUtil	Unified logging system
-PropertiesUtils	Configuration property management
-Scrolling	Advanced scrolling mechanisms
-TerminalUtils	Command-line integration
-TimestampUtils	Test timing utilities
-Validations	Business rule assertions
-Waits	Smart wait strategies
-
 ## Configuration
 
 Edit the `src/main/resources/environment.properties` file to configure:
