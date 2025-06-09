@@ -1,20 +1,5 @@
 {
   "login-credentials": {
-<<<<<<< HEAD
-    "username": "standard_user",
-    "password": "secret_sauce"
-  },
-  "product-names": {
-    "item1": {
-      "name": "Sauce Labs Backpack",
-      "price": "$29.99"
-    },
-    "item2": {
-      "name": "Sauce Labs Bike Light",
-      "price": "$9.99"
-    }
-  },
-=======
     "username": "Account@1.com",
     "password": "Mnbvcxz@2"
   },
@@ -35,13 +20,12 @@
     }
   },
   "file-upload": {
-    "filePath": "C:/Users/Mostafa.AbdelShafy/OneDrive - Link Development/Work Items/Link Dev/CITC_Regulation/Test Data/Valid/Satellite Internet Draft.pdf"
+    "filePath": "src/test/resources/testData/UpdateLocationPerformance Report.pdf"
   },
->>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
-  "information-form": {
-    "firstName": "testFirst_",
-    "lastName": "testSecond_",
-    "postalCode": "12345"
+  "dates": {
+    "day": "5",
+    "month": "May",
+    "year": "2025"
   },
   "confirmation-message": "Thank you for your order!"
 }

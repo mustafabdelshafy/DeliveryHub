@@ -5,13 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
 import org.swaglabs.utils.*;
 
+import static java.lang.System.getProperty;
+
 public class HomePage {
     //code
     //variables
-    private WebDriver driver;
-<<<<<<< HEAD
-=======
+    WebDriver driver;
     JsonUtils testData;
+  /*  String filePathFromJson = getProperty("filePath");
+    String fullPath = getProperty("user.dir") + "/" + filePathFromJson;*/
+  //Locators
+   private final By createOrderButton=By.cssSelector("button.btn-create-task");
     private final By pickup=By.xpath("//mat-expansion-panel-header[contains(., 'Pick-up')]");
     private final By Delivery=By.xpath("//mat-panel-title[contains(., 'Delivery')]");
     private final By customerName1=By.xpath("(//input[@formcontrolname='customerId'])[1]");
@@ -44,7 +48,6 @@ public class HomePage {
     private final By AccountName=By.xpath("(//span[contains(text(),'Account 1')])[2]");
 
 
->>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
 
     //constructor
     public HomePage (WebDriver driver)
@@ -52,12 +55,6 @@ public class HomePage {
         this.driver=driver;
     }
 
-    //Locators
-<<<<<<< HEAD
-    private final By cartIcon=By.cssSelector("[[data-test='shopping-cart-link']]");
-=======
-    private final By createOrderButton=By.cssSelector("button.btn-create-task");
->>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
 
     //actions
     public HomePage navigateToHomePage()
@@ -66,22 +63,6 @@ public class HomePage {
         return this;
     }
 
-<<<<<<< HEAD
-    public HomePage addSpecificProductToCart(String productName)
-    {
-        LogsUtil.info("Adding " + productName + " to cart");
-        // Corrected XPath with quotes around productName
-        By productLocator = By.xpath("//div[.='" + productName + "']");
-
-        // Use RelativeLocator to find the button below the product name
-        By addToCartButton = RelativeLocator.with(By.tagName("button")).below(productLocator);
-
-        ElementActions.clickElement(driver, addToCartButton);
-
-        return this;
-    }
-    public HomePage assertProductAddedToCart(String productName)
-=======
     public HomePage clickingCreateOrder()
     {
         LogsUtil.info("Clicking on Create order");
@@ -153,6 +134,7 @@ public class HomePage {
         LogsUtil.info("Account name matched");
         return this;
     }
+
    /* public HomePage assertProductAddedToCart(String productName)
 >>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
     {
@@ -169,6 +151,6 @@ public class HomePage {
     }
 =======
     }*/
->>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
+
 
 }

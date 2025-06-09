@@ -5,11 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-<<<<<<< HEAD
-    <artifactId>frameWork</artifactId>
-=======
     <artifactId>DHub</artifactId>
->>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
     <version>1.0-SNAPSHOT</version>
 
     <properties>

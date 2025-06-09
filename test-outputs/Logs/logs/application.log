@@ -1,314 +1,441 @@
-<<<<<<< HEAD
-[DEBUG] 2025-05-10 16:21:57.987 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-10 16:21:59.978 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-10 16:22:00.059 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-10 16:22:00.326 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+[DEBUG] 2025-06-08 14:46:19.877 [main] TestNG - suiteXmlPath: "C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml"
+[INFO] 2025-06-08 14:46:21.781 [main] TestNGListeners - Test Execution started
+[INFO] 2025-06-08 14:46:21.828 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-06-08 14:46:22.003 [main] Utils - [TestNG] Running:
+  C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml
 
-[INFO] 2025-05-10 16:22:10.656 [main] DriverManager - Driver created on:  Edge
-[INFO] 2025-05-10 16:22:12.919 [main] BrowserActions - Navigated to URL:  https://www.saucedemo.com/
-[DEBUG] 2025-05-10 16:22:13.614 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-10 16:22:13.633 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
-[DEBUG] 2025-05-10 16:22:14.811 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-10 16:22:14.812 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
-[INFO] 2025-05-10 16:22:16.666 [main] BrowserActions - Current URL https://www.saucedemo.com/inventory.html
-[INFO] 2025-05-10 16:22:16.820 [main] BrowserActions - Page Title:  Swag Labs
-[ERROR] 2025-05-10 16:22:16.860 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 16:22:16.878 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 16:22:17.144 [main] TestNGListeners - Test case successfulLogin passed
-[INFO] 2025-05-10 16:22:17.150 [main] BrowserActions - Closing the browser
-[DEBUG] 2025-05-10 16:22:20.727 [main] CompiledPath - Evaluating path: $['product-names']['item1']['name']
-[INFO] 2025-05-10 16:22:20.728 [main] JsonUtils - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[INFO] 2025-05-10 16:22:20.729 [main] HomePage - Adding Sauce Labs Backpack to cart
-[ERROR] 2025-05-10 16:22:20.748 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 16:22:20.749 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 16:22:20.754 [main] TestNGListeners - Test case addingProductToCart failed
-[INFO] 2025-05-10 16:22:20.767 [main] BrowserActions - Closing the browser
-[INFO] 2025-05-10 16:22:20.805 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-10 16:22:20.810 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\.m2\repository\allure\allure-2.33.0\bin\allure.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-10 16:22:20.811 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-10 16:22:20.816 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[DEBUG] 2025-05-10 16:24:07.252 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-10 16:24:08.955 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-10 16:24:08.997 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-10 16:24:09.115 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+[INFO] 2025-06-08 14:46:29.900 [main] DriverManager - Driver created on:  Edge
+[INFO] 2025-06-08 14:46:36.961 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-06-08 14:46:37.382 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-06-08 14:46:37.398 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-06-08 14:46:38.127 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-06-08 14:46:38.128 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-06-08 14:46:39.016 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-06-08 14:46:39.316 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:46:39.360 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:46:39.964 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-06-08 14:46:39.981 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-06-08 14:46:39.981 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-06-08 14:46:39.981 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-06-08 14:46:39.981 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-06-08 14:46:39.981 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-06-08 14:46:39.986 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-06-08 14:46:39.988 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-06-08 14:46:39.988 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[DEBUG] 2025-06-08 14:46:39.988 [main] CompiledPath - Evaluating path: $['file-upload']['filePath']
+[INFO] 2025-06-08 14:46:39.988 [main] JsonUtils - Json path: 'file-upload.filePath' in the json file: 'test-data' has value: 'src/test/resources/testData/UpdateLocationPerformance Report.pdf'
+[INFO] 2025-06-08 14:46:40.059 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-06-08 14:46:40.059 [main] HomePage - Clicking on Create order
+[INFO] 2025-06-08 14:46:43.966 [main] HomePage - Filling the pickup task form
+[INFO] 2025-06-08 14:47:00.480 [main] HomePage - Filling the delivery task form
+[INFO] 2025-06-08 14:47:13.758 [main] HomePage - Clicking on Creating Task Button
+[ERROR] 2025-06-08 14:47:14.010 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:47:14.010 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:47:14.056 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-06-08 14:47:16.198 [main] ListViewPage - Actual value: #33244
+[INFO] 2025-06-08 14:47:16.198 [main] ListViewPage - Clicking on List View Button
+[INFO] 2025-06-08 14:47:16.433 [main] ListViewPage - Navigating to List View Page
+[INFO] 2025-06-08 14:47:16.475 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/tasks
+[INFO] 2025-06-08 14:47:17.553 [main] ListViewPage - Actual value: 33244
+[INFO] 2025-06-08 14:47:17.555 [main] ListViewPage - Validating order ID...
+[INFO] 2025-06-08 14:47:17.585 [main] ListViewPage - ✅ Order ID matched
+[ERROR] 2025-06-08 14:47:17.585 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:47:17.585 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:47:17.599 [main] TestNGListeners - Test case listViewPage passed
+[DEBUG] 2025-06-08 14:47:17.609 [main] CompiledPath - Evaluating path: $['dates']['year']
+[ERROR] 2025-06-08 14:47:17.611 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.year' in the json file: 'test-data'
+[INFO] 2025-06-08 14:47:17.612 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: ''
+[DEBUG] 2025-06-08 14:47:17.613 [main] CompiledPath - Evaluating path: $['dates']['month']
+[ERROR] 2025-06-08 14:47:17.614 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.month' in the json file: 'test-data'
+[INFO] 2025-06-08 14:47:17.614 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: ''
+[DEBUG] 2025-06-08 14:47:17.614 [main] CompiledPath - Evaluating path: $['dates']['day']
+[ERROR] 2025-06-08 14:47:17.614 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.day' in the json file: 'test-data'
+[INFO] 2025-06-08 14:47:17.614 [main] JsonUtils - Json path: 'dates.day' in the json file: 'test-data' has value: ''
+[INFO] 2025-06-08 14:47:18.515 [main] P03_DashboardPage - Navigating to dashboard page
+[ERROR] 2025-06-08 14:47:18.538 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:47:18.547 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:47:18.570 [main] TestNGListeners - Test case filterByDateTest failed
+[DEBUG] 2025-06-08 14:47:18.653 [main] CompiledPath - Evaluating path: $['dates']['year']
+[ERROR] 2025-06-08 14:47:18.653 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.year' in the json file: 'test-data'
+[INFO] 2025-06-08 14:47:18.670 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: ''
+[ERROR] 2025-06-08 14:47:19.213 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:47:19.213 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:47:19.238 [main] TestNGListeners - Test case filterByYearTest failed
+[DEBUG] 2025-06-08 14:47:19.263 [main] CompiledPath - Evaluating path: $['dates']['month']
+[ERROR] 2025-06-08 14:47:19.263 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.month' in the json file: 'test-data'
+[INFO] 2025-06-08 14:47:19.281 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: ''
+[ERROR] 2025-06-08 14:47:51.424 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:47:51.424 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:47:51.447 [main] TestNGListeners - Test case filterByMonthTest failed
+[ERROR] 2025-06-08 14:47:52.362 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:47:52.362 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:47:52.392 [main] TestNGListeners - Test case openReportsModuleTest passed
+[INFO] 2025-06-08 14:47:52.691 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-06-08 14:48:01.721 [main] TerminalUtils - Command executed successfully: C:\Users\FAST\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
+[INFO] 2025-06-08 14:48:01.721 [main] AllureUtils - Allure report generated successfully on Windows
+[INFO] 2025-06-08 14:48:01.825 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-06-08-14-48-01.html".
+[INFO] 2025-06-08 14:48:02.812 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-06-08-14-48-01.html
+[DEBUG] 2025-06-08 14:51:07.283 [main] TestNG - suiteXmlPath: "C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml"
+[INFO] 2025-06-08 14:51:09.327 [main] TestNGListeners - Test Execution started
+[INFO] 2025-06-08 14:51:09.404 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-06-08 14:51:09.562 [main] Utils - [TestNG] Running:
+  C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml
 
-[INFO] 2025-05-10 16:24:14.410 [main] DriverManager - Driver created on:  Edge
-[INFO] 2025-05-10 16:24:16.114 [main] BrowserActions - Navigated to URL:  https://www.saucedemo.com/
-[DEBUG] 2025-05-10 16:24:16.689 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-10 16:24:16.700 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
-[DEBUG] 2025-05-10 16:24:17.360 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-10 16:24:17.361 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
-[INFO] 2025-05-10 16:24:18.317 [main] BrowserActions - Current URL https://www.saucedemo.com/inventory.html
-[INFO] 2025-05-10 16:24:18.452 [main] BrowserActions - Page Title:  Swag Labs
-[ERROR] 2025-05-10 16:24:18.568 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 16:24:18.580 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 16:24:19.001 [main] TestNGListeners - Test case successfulLogin passed
-[DEBUG] 2025-05-10 16:24:19.116 [main] CompiledPath - Evaluating path: $['product-names']['item1']['name']
-[INFO] 2025-05-10 16:24:19.117 [main] JsonUtils - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[INFO] 2025-05-10 16:24:19.117 [main] HomePage - Adding Sauce Labs Backpack to cart
-[ERROR] 2025-05-10 16:24:19.805 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 16:24:19.806 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 16:24:19.809 [main] TestNGListeners - Test case addingProductToCart passed
-[INFO] 2025-05-10 16:24:19.833 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-10 16:24:19.836 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\.m2\repository\allure\allure-2.33.0\bin\allure.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-10 16:24:19.837 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-10 16:24:19.844 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[DEBUG] 2025-05-10 20:31:01.406 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-10 20:31:03.197 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-10 20:31:03.243 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-10 20:31:03.365 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+[INFO] 2025-06-08 14:51:17.246 [main] DriverManager - Driver created on:  Edge
+[INFO] 2025-06-08 14:51:23.264 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-06-08 14:51:23.856 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-06-08 14:51:23.887 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-06-08 14:51:24.430 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-06-08 14:51:24.430 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-06-08 14:51:25.178 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-06-08 14:51:25.249 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:51:25.269 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:51:25.741 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-06-08 14:51:25.764 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-06-08 14:51:25.764 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-06-08 14:51:25.769 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-06-08 14:51:25.769 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-06-08 14:51:25.775 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-06-08 14:51:25.779 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-06-08 14:51:25.779 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-06-08 14:51:25.779 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[DEBUG] 2025-06-08 14:51:25.779 [main] CompiledPath - Evaluating path: $['file-upload']['filePath']
+[INFO] 2025-06-08 14:51:25.779 [main] JsonUtils - Json path: 'file-upload.filePath' in the json file: 'test-data' has value: 'src/test/resources/testData/UpdateLocationPerformance Report.pdf'
+[INFO] 2025-06-08 14:51:25.840 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-06-08 14:51:25.840 [main] HomePage - Clicking on Create order
+[INFO] 2025-06-08 14:51:32.635 [main] HomePage - Filling the pickup task form
+[INFO] 2025-06-08 14:51:51.599 [main] HomePage - Filling the delivery task form
+[INFO] 2025-06-08 14:52:05.035 [main] HomePage - Clicking on Creating Task Button
+[ERROR] 2025-06-08 14:52:05.282 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:52:05.290 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:52:05.313 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-06-08 14:52:09.993 [main] ListViewPage - Actual value: #33245
+[INFO] 2025-06-08 14:52:09.995 [main] ListViewPage - Clicking on List View Button
+[INFO] 2025-06-08 14:52:10.296 [main] ListViewPage - Navigating to List View Page
+[INFO] 2025-06-08 14:52:10.403 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/tasks
+[INFO] 2025-06-08 14:52:12.276 [main] ListViewPage - Actual value: 33245
+[INFO] 2025-06-08 14:52:12.276 [main] ListViewPage - Validating order ID...
+[INFO] 2025-06-08 14:52:12.339 [main] ListViewPage - ✅ Order ID matched
+[ERROR] 2025-06-08 14:52:12.348 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:52:12.350 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:52:12.361 [main] TestNGListeners - Test case listViewPage passed
+[DEBUG] 2025-06-08 14:52:12.417 [main] CompiledPath - Evaluating path: $['dates']['year']
+[ERROR] 2025-06-08 14:52:12.417 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.year' in the json file: 'test-data'
+[INFO] 2025-06-08 14:52:12.417 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: ''
+[DEBUG] 2025-06-08 14:52:12.417 [main] CompiledPath - Evaluating path: $['dates']['month']
+[ERROR] 2025-06-08 14:52:12.417 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.month' in the json file: 'test-data'
+[INFO] 2025-06-08 14:52:12.417 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: ''
+[DEBUG] 2025-06-08 14:52:12.424 [main] CompiledPath - Evaluating path: $['dates']['day']
+[ERROR] 2025-06-08 14:52:12.424 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.day' in the json file: 'test-data'
+[INFO] 2025-06-08 14:52:12.424 [main] JsonUtils - Json path: 'dates.day' in the json file: 'test-data' has value: ''
+[INFO] 2025-06-08 14:52:13.230 [main] P03_DashboardPage - Navigating to dashboard page
+[ERROR] 2025-06-08 14:52:13.230 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:52:13.247 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:52:13.282 [main] TestNGListeners - Test case filterByDateTest failed
+[DEBUG] 2025-06-08 14:52:13.459 [main] CompiledPath - Evaluating path: $['dates']['year']
+[ERROR] 2025-06-08 14:52:13.459 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.year' in the json file: 'test-data'
+[INFO] 2025-06-08 14:52:13.462 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: ''
+[ERROR] 2025-06-08 14:52:47.712 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:52:47.715 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:52:47.729 [main] TestNGListeners - Test case filterByYearTest failed
+[DEBUG] 2025-06-08 14:52:47.806 [main] CompiledPath - Evaluating path: $['dates']['month']
+[ERROR] 2025-06-08 14:52:47.808 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.month' in the json file: 'test-data'
+[INFO] 2025-06-08 14:52:47.811 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: ''
+[ERROR] 2025-06-08 14:53:19.133 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:53:19.134 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:53:19.143 [main] TestNGListeners - Test case filterByMonthTest failed
+[ERROR] 2025-06-08 14:53:20.310 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:53:20.318 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:53:20.323 [main] TestNGListeners - Test case openReportsModuleTest passed
+[INFO] 2025-06-08 14:53:20.491 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-06-08 14:53:26.784 [main] TerminalUtils - Command executed successfully: C:\Users\FAST\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
+[INFO] 2025-06-08 14:53:26.785 [main] AllureUtils - Allure report generated successfully on Windows
+[INFO] 2025-06-08 14:53:26.803 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-06-08-14-53-26.html".
+[INFO] 2025-06-08 14:53:27.614 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-06-08-14-53-26.html
+[DEBUG] 2025-06-08 14:54:33.495 [main] TestNG - suiteXmlPath: "C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml"
+[INFO] 2025-06-08 14:54:35.490 [main] TestNGListeners - Test Execution started
+[INFO] 2025-06-08 14:54:35.540 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-06-08 14:54:35.684 [main] Utils - [TestNG] Running:
+  C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml
 
-[INFO] 2025-05-10 20:31:10.683 [main] DriverManager - Driver created on:  Edge
-[INFO] 2025-05-10 20:31:13.141 [main] BrowserActions - Navigated to URL:  https://www.saucedemo.com/
-[DEBUG] 2025-05-10 20:31:13.825 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-10 20:31:13.853 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
-[DEBUG] 2025-05-10 20:31:15.182 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-10 20:31:15.184 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
-[INFO] 2025-05-10 20:31:16.866 [main] BrowserActions - Current URL https://www.saucedemo.com/inventory.html
-[INFO] 2025-05-10 20:31:17.118 [main] BrowserActions - Page Title:  Swag Labs
-[ERROR] 2025-05-10 20:31:17.181 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 20:31:17.204 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 20:31:17.549 [main] TestNGListeners - Test case successfulLogin passed
-[DEBUG] 2025-05-10 20:31:17.611 [main] CompiledPath - Evaluating path: $['product-names']['item1']['name']
-[INFO] 2025-05-10 20:31:17.612 [main] JsonUtils - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[INFO] 2025-05-10 20:31:17.614 [main] HomePage - Adding Sauce Labs Backpack to cart
-[ERROR] 2025-05-10 20:31:18.412 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 20:31:18.413 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 20:31:18.421 [main] TestNGListeners - Test case addingProductToCart passed
-[INFO] 2025-05-10 20:31:18.456 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-10 20:31:18.464 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\.m2\repository\allure\allure-2.33.0\bin\allure.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-10 20:31:18.465 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-10 20:31:18.471 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[INFO] 2025-05-10 20:31:37.648 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-10-20-31-18.html
-[DEBUG] 2025-05-10 20:36:52.121 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-10 20:36:53.863 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-10 20:36:53.904 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-10 20:36:54.011 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+[INFO] 2025-06-08 14:54:43.007 [main] DriverManager - Driver created on:  Edge
+[INFO] 2025-06-08 14:54:48.953 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-06-08 14:54:49.498 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-06-08 14:54:49.553 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-06-08 14:54:50.177 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-06-08 14:54:50.179 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-06-08 14:54:51.168 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-06-08 14:54:51.284 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:54:51.313 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:54:51.788 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-06-08 14:54:51.827 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-06-08 14:54:51.827 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-06-08 14:54:51.827 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-06-08 14:54:51.834 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-06-08 14:54:51.834 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-06-08 14:54:51.835 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-06-08 14:54:51.835 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-06-08 14:54:51.835 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[DEBUG] 2025-06-08 14:54:51.835 [main] CompiledPath - Evaluating path: $['file-upload']['filePath']
+[INFO] 2025-06-08 14:54:51.835 [main] JsonUtils - Json path: 'file-upload.filePath' in the json file: 'test-data' has value: 'src/test/resources/testData/UpdateLocationPerformance Report.pdf'
+[INFO] 2025-06-08 14:54:52.193 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-06-08 14:54:52.193 [main] HomePage - Clicking on Create order
+[INFO] 2025-06-08 14:54:56.228 [main] HomePage - Filling the pickup task form
+[INFO] 2025-06-08 14:55:15.944 [main] HomePage - Filling the delivery task form
+[INFO] 2025-06-08 14:55:28.439 [main] HomePage - Clicking on Creating Task Button
+[ERROR] 2025-06-08 14:55:28.807 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:55:28.807 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:55:28.838 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-06-08 14:55:30.998 [main] ListViewPage - Actual value: #33246
+[INFO] 2025-06-08 14:55:30.998 [main] ListViewPage - Clicking on List View Button
+[INFO] 2025-06-08 14:55:31.370 [main] ListViewPage - Navigating to List View Page
+[INFO] 2025-06-08 14:55:31.489 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/tasks
+[INFO] 2025-06-08 14:55:32.702 [main] ListViewPage - Actual value: 33246
+[INFO] 2025-06-08 14:55:32.702 [main] ListViewPage - Validating order ID...
+[INFO] 2025-06-08 14:55:32.768 [main] ListViewPage - ✅ Order ID matched
+[ERROR] 2025-06-08 14:55:32.772 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:55:32.772 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:55:32.772 [main] TestNGListeners - Test case listViewPage passed
+[DEBUG] 2025-06-08 14:55:32.788 [main] CompiledPath - Evaluating path: $['dates']['year']
+[ERROR] 2025-06-08 14:55:32.788 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.year' in the json file: 'test-data'
+[INFO] 2025-06-08 14:55:32.793 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: ''
+[DEBUG] 2025-06-08 14:55:32.794 [main] CompiledPath - Evaluating path: $['dates']['month']
+[ERROR] 2025-06-08 14:55:32.795 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.month' in the json file: 'test-data'
+[INFO] 2025-06-08 14:55:32.795 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: ''
+[DEBUG] 2025-06-08 14:55:32.796 [main] CompiledPath - Evaluating path: $['dates']['day']
+[ERROR] 2025-06-08 14:55:32.797 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.day' in the json file: 'test-data'
+[INFO] 2025-06-08 14:55:32.797 [main] JsonUtils - Json path: 'dates.day' in the json file: 'test-data' has value: ''
+[INFO] 2025-06-08 14:55:33.604 [main] P03_DashboardPage - Navigating to dashboard page
+[ERROR] 2025-06-08 14:55:33.626 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:55:33.626 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:55:33.644 [main] TestNGListeners - Test case filterByDateTest failed
+[DEBUG] 2025-06-08 14:55:33.757 [main] CompiledPath - Evaluating path: $['dates']['year']
+[ERROR] 2025-06-08 14:55:33.757 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.year' in the json file: 'test-data'
+[INFO] 2025-06-08 14:55:33.757 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: ''
+[ERROR] 2025-06-08 14:56:06.033 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:56:06.049 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:56:06.055 [main] TestNGListeners - Test case filterByYearTest failed
+[DEBUG] 2025-06-08 14:56:06.072 [main] CompiledPath - Evaluating path: $['dates']['month']
+[ERROR] 2025-06-08 14:56:06.072 [main] JsonUtils - Missing property in path $['dates'] No results for json path: 'dates.month' in the json file: 'test-data'
+[INFO] 2025-06-08 14:56:06.072 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: ''
+[ERROR] 2025-06-08 14:56:37.177 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:56:37.179 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:56:37.188 [main] TestNGListeners - Test case filterByMonthTest failed
+[ERROR] 2025-06-08 14:56:38.128 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:56:38.129 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:56:38.141 [main] TestNGListeners - Test case openReportsModuleTest passed
+[INFO] 2025-06-08 14:56:38.271 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-06-08 14:56:47.741 [main] TerminalUtils - Command executed successfully: C:\Users\FAST\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
+[INFO] 2025-06-08 14:56:47.742 [main] AllureUtils - Allure report generated successfully on Windows
+[INFO] 2025-06-08 14:56:47.755 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-06-08-14-56-47.html".
+[INFO] 2025-06-08 14:56:50.531 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-06-08-14-56-47.html
+[DEBUG] 2025-06-08 14:57:40.932 [main] TestNG - suiteXmlPath: "C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml"
+[INFO] 2025-06-08 14:57:43.375 [main] TestNGListeners - Test Execution started
+[INFO] 2025-06-08 14:57:43.439 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-06-08 14:57:43.644 [main] Utils - [TestNG] Running:
+  C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml
 
-[INFO] 2025-05-10 20:37:01.203 [main] DriverManager - Driver created on:  Edge
-[INFO] 2025-05-10 20:37:07.277 [main] BrowserActions - Navigated to URL:  https://www.saucedemo.com/
-[DEBUG] 2025-05-10 20:37:08.420 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-10 20:37:08.431 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
-[DEBUG] 2025-05-10 20:37:09.345 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-10 20:37:09.347 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
-[INFO] 2025-05-10 20:37:10.841 [main] BrowserActions - Current URL https://www.saucedemo.com/inventory.html
-[INFO] 2025-05-10 20:37:11.017 [main] BrowserActions - Page Title:  Swag Labs
-[ERROR] 2025-05-10 20:37:11.065 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 20:37:11.104 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 20:37:11.525 [main] TestNGListeners - Test case successfulLogin passed
-[DEBUG] 2025-05-10 20:37:11.593 [main] CompiledPath - Evaluating path: $['product-names']['item1']['name']
-[INFO] 2025-05-10 20:37:11.594 [main] JsonUtils - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[INFO] 2025-05-10 20:37:11.595 [main] HomePage - Adding Sauce Labs Backpack to cart
-[ERROR] 2025-05-10 20:37:12.400 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 20:37:12.401 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 20:37:12.406 [main] TestNGListeners - Test case addingProductToCart passed
-[INFO] 2025-05-10 20:37:12.448 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-10 20:37:12.455 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\.m2\repository\allure\allure-2.33.0\bin\allure.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-10 20:37:12.456 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-10 20:37:12.467 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[DEBUG] 2025-05-10 20:41:27.183 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-10 20:41:28.987 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-10 20:41:29.030 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-10 20:41:29.182 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+[INFO] 2025-06-08 14:57:52.004 [main] DriverManager - Driver created on:  Edge
+[INFO] 2025-06-08 14:57:58.218 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-06-08 14:57:58.641 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-06-08 14:57:58.656 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-06-08 14:57:59.087 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-06-08 14:57:59.087 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-06-08 14:57:59.799 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-06-08 14:57:59.866 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:57:59.911 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:58:00.654 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-06-08 14:58:00.691 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-06-08 14:58:00.696 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-06-08 14:58:00.701 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-06-08 14:58:00.701 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-06-08 14:58:00.701 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-06-08 14:58:00.701 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-06-08 14:58:00.706 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-06-08 14:58:00.706 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[DEBUG] 2025-06-08 14:58:00.706 [main] CompiledPath - Evaluating path: $['file-upload']['filePath']
+[INFO] 2025-06-08 14:58:00.706 [main] JsonUtils - Json path: 'file-upload.filePath' in the json file: 'test-data' has value: 'src/test/resources/testData/UpdateLocationPerformance Report.pdf'
+[INFO] 2025-06-08 14:58:00.785 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-06-08 14:58:00.786 [main] HomePage - Clicking on Create order
+[INFO] 2025-06-08 14:58:03.368 [main] HomePage - Filling the pickup task form
+[INFO] 2025-06-08 14:58:25.230 [main] HomePage - Filling the delivery task form
+[INFO] 2025-06-08 14:58:38.627 [main] HomePage - Clicking on Creating Task Button
+[ERROR] 2025-06-08 14:58:38.891 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:58:38.891 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:58:38.922 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-06-08 14:58:41.466 [main] ListViewPage - Actual value: #33247
+[INFO] 2025-06-08 14:58:41.467 [main] ListViewPage - Clicking on List View Button
+[INFO] 2025-06-08 14:58:41.692 [main] ListViewPage - Navigating to List View Page
+[INFO] 2025-06-08 14:58:41.862 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/tasks
+[INFO] 2025-06-08 14:58:43.460 [main] ListViewPage - Actual value: 33247
+[INFO] 2025-06-08 14:58:43.460 [main] ListViewPage - Validating order ID...
+[INFO] 2025-06-08 14:58:43.503 [main] ListViewPage - ✅ Order ID matched
+[ERROR] 2025-06-08 14:58:43.503 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:58:43.503 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:58:43.513 [main] TestNGListeners - Test case listViewPage passed
+[DEBUG] 2025-06-08 14:58:43.542 [main] CompiledPath - Evaluating path: $['dates']['year']
+[INFO] 2025-06-08 14:58:43.542 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: '2025'
+[DEBUG] 2025-06-08 14:58:43.551 [main] CompiledPath - Evaluating path: $['dates']['month']
+[INFO] 2025-06-08 14:58:43.551 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: 'May'
+[DEBUG] 2025-06-08 14:58:43.551 [main] CompiledPath - Evaluating path: $['dates']['day']
+[INFO] 2025-06-08 14:58:43.551 [main] JsonUtils - Json path: 'dates.day' in the json file: 'test-data' has value: '5'
+[INFO] 2025-06-08 14:58:44.339 [main] P03_DashboardPage - Navigating to dashboard page
+[ERROR] 2025-06-08 14:58:44.371 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:58:44.373 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:58:44.399 [main] TestNGListeners - Test case filterByDateTest failed
+[DEBUG] 2025-06-08 14:58:44.539 [main] CompiledPath - Evaluating path: $['dates']['year']
+[INFO] 2025-06-08 14:58:44.539 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: '2025'
+[ERROR] 2025-06-08 14:58:47.304 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:58:47.307 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:58:47.313 [main] TestNGListeners - Test case filterByYearTest passed
+[DEBUG] 2025-06-08 14:58:47.322 [main] CompiledPath - Evaluating path: $['dates']['month']
+[INFO] 2025-06-08 14:58:47.322 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: 'May'
+[ERROR] 2025-06-08 14:58:50.944 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:58:50.957 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:58:50.962 [main] TestNGListeners - Test case filterByMonthTest passed
+[ERROR] 2025-06-08 14:58:53.793 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 14:58:53.795 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 14:58:53.799 [main] TestNGListeners - Test case openReportsModuleTest passed
+[INFO] 2025-06-08 14:58:54.100 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-06-08 14:59:00.809 [main] TerminalUtils - Command executed successfully: C:\Users\FAST\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
+[INFO] 2025-06-08 14:59:00.809 [main] AllureUtils - Allure report generated successfully on Windows
+[INFO] 2025-06-08 14:59:00.828 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-06-08-14-59-00.html".
+[INFO] 2025-06-08 14:59:01.753 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-06-08-14-59-00.html
+[DEBUG] 2025-06-08 15:10:39.835 [main] TestNG - suiteXmlPath: "C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml"
+[INFO] 2025-06-08 15:10:41.820 [main] TestNGListeners - Test Execution started
+[INFO] 2025-06-08 15:10:41.876 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-06-08 15:10:42.031 [main] Utils - [TestNG] Running:
+  C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml
 
-[INFO] 2025-05-10 20:41:36.975 [main] DriverManager - Driver created on:  Edge
-[INFO] 2025-05-10 20:41:45.604 [main] BrowserActions - Navigated to URL:  https://www.saucedemo.com/
-[DEBUG] 2025-05-10 20:41:46.208 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-10 20:41:46.224 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
-[DEBUG] 2025-05-10 20:41:46.829 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-10 20:41:46.830 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
-[INFO] 2025-05-10 20:41:48.291 [main] BrowserActions - Current URL https://www.saucedemo.com/inventory.html
-[INFO] 2025-05-10 20:41:48.358 [main] BrowserActions - Page Title:  Swag Labs
-[ERROR] 2025-05-10 20:41:48.451 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 20:41:48.463 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 20:41:48.701 [main] TestNGListeners - Test case successfulLogin passed
-[DEBUG] 2025-05-10 20:41:48.746 [main] CompiledPath - Evaluating path: $['product-names']['item1']['name']
-[INFO] 2025-05-10 20:41:48.747 [main] JsonUtils - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[INFO] 2025-05-10 20:41:48.748 [main] HomePage - Adding Sauce Labs Backpack to cart
-[ERROR] 2025-05-10 20:41:49.397 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 20:41:49.400 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 20:41:49.411 [main] TestNGListeners - Test case addingProductToCart passed
-[INFO] 2025-05-10 20:41:49.438 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-10 20:41:49.442 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\.m2\repository\allure\allure-2.33.0\bin\allure.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-10 20:41:49.442 [main] AllureUtils - Allure report generated successfully on Windows
-[INFO] 2025-05-10 20:41:49.451 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-05-10-20-41-49.html".
-[INFO] 2025-05-10 20:41:49.960 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-10-20-41-49.html
-[DEBUG] 2025-05-10 21:03:41.215 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-10 21:03:44.927 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-10 21:03:45.002 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-10 21:03:45.268 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+[INFO] 2025-06-08 15:10:49.131 [main] DriverManager - Driver created on:  Edge
+[INFO] 2025-06-08 15:10:59.185 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-06-08 15:10:59.570 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-06-08 15:10:59.586 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-06-08 15:11:00.075 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-06-08 15:11:00.075 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-06-08 15:11:00.740 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-06-08 15:11:00.846 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:11:00.857 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:11:01.557 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-06-08 15:11:01.603 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-06-08 15:11:01.604 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-06-08 15:11:01.606 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-06-08 15:11:01.608 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-06-08 15:11:01.608 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-06-08 15:11:01.608 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-06-08 15:11:01.608 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-06-08 15:11:01.612 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[DEBUG] 2025-06-08 15:11:01.613 [main] CompiledPath - Evaluating path: $['file-upload']['filePath']
+[INFO] 2025-06-08 15:11:01.613 [main] JsonUtils - Json path: 'file-upload.filePath' in the json file: 'test-data' has value: 'src/test/resources/testData/UpdateLocationPerformance Report.pdf'
+[INFO] 2025-06-08 15:11:01.658 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-06-08 15:11:01.659 [main] HomePage - Clicking on Create order
+[INFO] 2025-06-08 15:11:04.495 [main] HomePage - Filling the pickup task form
+[INFO] 2025-06-08 15:11:41.023 [main] HomePage - Filling the delivery task form
+[ERROR] 2025-06-08 15:12:16.012 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:12:16.012 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:12:16.027 [main] TestNGListeners - Test case createOrder failed
+[ERROR] 2025-06-08 15:12:16.054 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:12:16.066 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:12:16.075 [main] TestNGListeners - Test case listViewPage skipped
+[DEBUG] 2025-06-08 15:12:16.082 [main] CompiledPath - Evaluating path: $['dates']['year']
+[INFO] 2025-06-08 15:12:16.082 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: '2025'
+[DEBUG] 2025-06-08 15:12:16.082 [main] CompiledPath - Evaluating path: $['dates']['month']
+[INFO] 2025-06-08 15:12:16.082 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: 'May'
+[DEBUG] 2025-06-08 15:12:16.082 [main] CompiledPath - Evaluating path: $['dates']['day']
+[INFO] 2025-06-08 15:12:16.082 [main] JsonUtils - Json path: 'dates.day' in the json file: 'test-data' has value: '5'
+[INFO] 2025-06-08 15:12:18.732 [main] P03_DashboardPage - Navigating to dashboard page
+[INFO] 2025-06-08 15:12:18.910 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app/settings/merchant-dashboard
+[ERROR] 2025-06-08 15:12:32.714 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:12:32.717 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:12:32.735 [main] TestNGListeners - Test case filterByDateTest passed
+[DEBUG] 2025-06-08 15:12:32.744 [main] CompiledPath - Evaluating path: $['dates']['year']
+[INFO] 2025-06-08 15:12:32.744 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: '2025'
+[ERROR] 2025-06-08 15:12:36.079 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:12:36.079 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:12:36.079 [main] TestNGListeners - Test case filterByYearTest passed
+[DEBUG] 2025-06-08 15:12:36.098 [main] CompiledPath - Evaluating path: $['dates']['month']
+[INFO] 2025-06-08 15:12:36.098 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: 'May'
+[ERROR] 2025-06-08 15:12:38.250 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:12:38.251 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:12:38.254 [main] TestNGListeners - Test case filterByMonthTest passed
+[ERROR] 2025-06-08 15:12:40.101 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:12:40.104 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:12:40.116 [main] TestNGListeners - Test case openReportsModuleTest passed
+[INFO] 2025-06-08 15:12:40.321 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-06-08 15:12:45.450 [main] TerminalUtils - Command executed successfully: C:\Users\FAST\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
+[INFO] 2025-06-08 15:12:45.450 [main] AllureUtils - Allure report generated successfully on Windows
+[INFO] 2025-06-08 15:12:45.572 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-06-08-15-12-45.html".
+[INFO] 2025-06-08 15:12:46.295 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-06-08-15-12-45.html
+[DEBUG] 2025-06-08 15:13:34.152 [main] TestNG - suiteXmlPath: "C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml"
+[INFO] 2025-06-08 15:13:36.031 [main] TestNGListeners - Test Execution started
+[INFO] 2025-06-08 15:13:36.079 [main] PropertiesUtils - Loading Properties File Data
+[INFO] 2025-06-08 15:13:36.198 [main] Utils - [TestNG] Running:
+  C:\Users\FAST\AppData\Local\JetBrains\IntelliJIdea2024.1\temp-testng-customsuite.xml
 
-[INFO] 2025-05-10 21:03:54.891 [main] DriverManager - Driver created on:  Edge
-[INFO] 2025-05-10 21:03:57.748 [main] BrowserActions - Navigated to URL:  https://www.saucedemo.com/
-[DEBUG] 2025-05-10 21:03:58.334 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-10 21:03:58.348 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
-[DEBUG] 2025-05-10 21:03:59.162 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-10 21:03:59.166 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
-[INFO] 2025-05-10 21:04:01.528 [main] BrowserActions - Current URL https://www.saucedemo.com/inventory.html
-[INFO] 2025-05-10 21:04:01.643 [main] BrowserActions - Page Title:  Swag Labs
-[ERROR] 2025-05-10 21:04:01.732 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 21:04:01.785 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 21:04:02.135 [main] TestNGListeners - Test case successfulLogin passed
-[DEBUG] 2025-05-10 21:04:02.224 [main] CompiledPath - Evaluating path: $['product-names']['item1']['name']
-[INFO] 2025-05-10 21:04:02.225 [main] JsonUtils - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[INFO] 2025-05-10 21:04:02.227 [main] HomePage - Adding Sauce Labs Backpack to cart
-[ERROR] 2025-05-10 21:04:03.043 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-[ERROR] 2025-05-10 21:04:03.046 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-10 21:04:03.049 [main] TestNGListeners - Test case addingProductToCart passed
-[INFO] 2025-05-10 21:04:03.100 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-10 21:04:03.111 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\.m2\repository\allure\allure-2.33.0\bin\allure.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-10 21:04:03.112 [main] AllureUtils - Allure report generated successfully on Windows
-[INFO] 2025-05-10 21:04:03.137 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-05-10-21-04-03.html".
-[INFO] 2025-05-10 21:04:03.781 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-10-21-04-03.html
-=======
-[DEBUG] 2025-05-30 18:09:25.972 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-30 18:09:28.403 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-30 18:09:28.474 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-30 18:09:28.883 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
-
-[INFO] 2025-05-30 18:09:44.469 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
-[DEBUG] 2025-05-30 18:09:44.707 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-30 18:09:44.734 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
-[DEBUG] 2025-05-30 18:09:45.379 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-30 18:09:45.379 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
-[INFO] 2025-05-30 18:09:46.237 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
-[ERROR] 2025-05-30 18:09:46.611 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:09:47.171 [main] TestNGListeners - Test case loginTest passed
-[DEBUG] 2025-05-30 18:09:47.210 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
-[INFO] 2025-05-30 18:09:47.214 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[DEBUG] 2025-05-30 18:09:47.214 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
-[INFO] 2025-05-30 18:09:47.220 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
-[DEBUG] 2025-05-30 18:09:47.222 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
-[INFO] 2025-05-30 18:09:47.222 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
-[DEBUG] 2025-05-30 18:09:47.223 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
-[INFO] 2025-05-30 18:09:47.227 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
-[INFO] 2025-05-30 18:09:47.641 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
-[INFO] 2025-05-30 18:09:47.641 [main] HomePage - Clicking on Create order
-[INFO] 2025-05-30 18:09:50.620 [main] HomePage - Filling the pickup task form
-[INFO] 2025-05-30 18:10:08.631 [main] HomePage - Filling the delivery task form
-[INFO] 2025-05-30 18:10:21.661 [main] HomePage - Clicking on Creating Task Button
-[INFO] 2025-05-30 18:10:25.157 [main] HomePage - Actual value: Account 1
-[INFO] 2025-05-30 18:10:25.179 [main] HomePage - Account name matched
-[ERROR] 2025-05-30 18:10:25.544 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:10:25.554 [main] TestNGListeners - Test case createOrder passed
-[INFO] 2025-05-30 18:10:25.595 [main] TestNGListeners - Test Execution finished
-[INFO] 2025-05-30 18:10:32.181 [main] TerminalUtils - Command executed successfully: C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report clean --single-file
-[INFO] 2025-05-30 18:10:32.186 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-30 18:10:32.187 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[INFO] 2025-05-30 18:10:55.341 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-10-32.html
-[DEBUG] 2025-05-30 18:15:37.927 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-30 18:15:40.954 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-30 18:15:41.050 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-30 18:15:41.442 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
-
-[INFO] 2025-05-30 18:16:07.579 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
-[DEBUG] 2025-05-30 18:16:08.267 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-30 18:16:08.352 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
-[DEBUG] 2025-05-30 18:16:09.130 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-30 18:16:09.131 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
-[INFO] 2025-05-30 18:16:11.244 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
-[ERROR] 2025-05-30 18:16:12.025 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:16:13.033 [main] TestNGListeners - Test case loginTest passed
-[DEBUG] 2025-05-30 18:16:13.063 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
-[INFO] 2025-05-30 18:16:13.065 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[DEBUG] 2025-05-30 18:16:13.074 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
-[INFO] 2025-05-30 18:16:13.171 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
-[DEBUG] 2025-05-30 18:16:13.172 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
-[INFO] 2025-05-30 18:16:13.174 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
-[DEBUG] 2025-05-30 18:16:13.175 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
-[INFO] 2025-05-30 18:16:13.177 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
-[INFO] 2025-05-30 18:16:13.433 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
-[INFO] 2025-05-30 18:16:13.434 [main] HomePage - Clicking on Create order
-[INFO] 2025-05-30 18:16:16.724 [main] HomePage - Filling the pickup task form
-[INFO] 2025-05-30 18:16:41.229 [main] HomePage - Filling the delivery task form
-[INFO] 2025-05-30 18:17:02.126 [main] HomePage - Clicking on Creating Task Button
-[INFO] 2025-05-30 18:17:05.711 [main] HomePage - Actual value: Account 1
-[INFO] 2025-05-30 18:17:05.735 [main] HomePage - Account name matched
-[ERROR] 2025-05-30 18:17:06.150 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:17:06.168 [main] TestNGListeners - Test case createOrder passed
-[INFO] 2025-05-30 18:17:06.328 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-30 18:17:06.366 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\2.33.0\bin.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-30 18:17:06.367 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-30 18:17:06.369 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[INFO] 2025-05-30 18:17:19.976 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-17-06.html
-[DEBUG] 2025-05-30 18:19:05.991 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-30 18:19:07.745 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-30 18:19:07.792 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-30 18:19:08.063 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
-
-[INFO] 2025-05-30 18:19:22.013 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
-[DEBUG] 2025-05-30 18:19:22.337 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-30 18:19:22.348 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
-[DEBUG] 2025-05-30 18:19:23.281 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-30 18:19:23.284 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
-[INFO] 2025-05-30 18:19:24.246 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
-[ERROR] 2025-05-30 18:19:24.610 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:19:25.303 [main] TestNGListeners - Test case loginTest passed
-[DEBUG] 2025-05-30 18:19:25.320 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
-[INFO] 2025-05-30 18:19:25.321 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[DEBUG] 2025-05-30 18:19:25.321 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
-[INFO] 2025-05-30 18:19:25.322 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
-[DEBUG] 2025-05-30 18:19:25.322 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
-[INFO] 2025-05-30 18:19:25.323 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
-[DEBUG] 2025-05-30 18:19:25.324 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
-[INFO] 2025-05-30 18:19:25.325 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
-[INFO] 2025-05-30 18:19:25.543 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
-[INFO] 2025-05-30 18:19:25.544 [main] HomePage - Clicking on Create order
-[INFO] 2025-05-30 18:19:28.522 [main] HomePage - Filling the pickup task form
-[INFO] 2025-05-30 18:19:46.409 [main] HomePage - Filling the delivery task form
-[INFO] 2025-05-30 18:20:00.769 [main] HomePage - Clicking on Creating Task Button
-[INFO] 2025-05-30 18:20:03.635 [main] HomePage - Actual value: Account 1
-[INFO] 2025-05-30 18:20:03.653 [main] HomePage - Account name matched
-[ERROR] 2025-05-30 18:20:04.088 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:20:04.101 [main] TestNGListeners - Test case createOrder passed
-[INFO] 2025-05-30 18:20:04.133 [main] TestNGListeners - Test Execution finished
-[ERROR] 2025-05-30 18:20:04.139 [main] TerminalUtils - Failed to execute command: Cannot run program "C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\2.33.0\bin.bat": CreateProcess error=2, The system cannot find the file specified
-[INFO] 2025-05-30 18:20:04.140 [main] AllureUtils - Allure report generated successfully on Windows
-[ERROR] 2025-05-30 18:20:04.141 [main] FilesUtils - Failed to rename file: Source 'test-outputs\allure-report\index.html' does not exist
-[INFO] 2025-05-30 18:20:10.684 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-20-04.html
-[DEBUG] 2025-05-30 18:34:37.786 [main] TestNG - suiteXmlPath: "C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-[INFO] 2025-05-30 18:34:39.648 [main] TestNGListeners - Test Execution started
-[INFO] 2025-05-30 18:34:39.698 [main] PropertiesUtils - Loading Properties File Data
-[INFO] 2025-05-30 18:34:39.941 [main] Utils - [TestNG] Running:
-  C:\Users\Mostafa.AbdelShafy\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
-
-[INFO] 2025-05-30 18:34:53.348 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
-[DEBUG] 2025-05-30 18:34:53.743 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
-[INFO] 2025-05-30 18:34:53.765 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
-[DEBUG] 2025-05-30 18:34:54.305 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
-[INFO] 2025-05-30 18:34:54.306 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
-[INFO] 2025-05-30 18:34:55.477 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
-[ERROR] 2025-05-30 18:34:56.582 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:34:57.116 [main] TestNGListeners - Test case loginTest passed
-[DEBUG] 2025-05-30 18:34:57.132 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
-[INFO] 2025-05-30 18:34:57.133 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-[DEBUG] 2025-05-30 18:34:57.133 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
-[INFO] 2025-05-30 18:34:57.134 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
-[DEBUG] 2025-05-30 18:34:57.135 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
-[INFO] 2025-05-30 18:34:57.136 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
-[DEBUG] 2025-05-30 18:34:57.136 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
-[INFO] 2025-05-30 18:34:57.136 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
-[INFO] 2025-05-30 18:34:57.315 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
-[INFO] 2025-05-30 18:34:57.315 [main] HomePage - Clicking on Create order
-[INFO] 2025-05-30 18:35:00.312 [main] HomePage - Filling the pickup task form
-[INFO] 2025-05-30 18:35:18.858 [main] HomePage - Filling the delivery task form
-[INFO] 2025-05-30 18:35:32.539 [main] HomePage - Clicking on Creating Task Button
-[INFO] 2025-05-30 18:35:35.556 [main] HomePage - Actual value: Account 1
-[INFO] 2025-05-30 18:35:35.576 [main] HomePage - Account name matched
-[ERROR] 2025-05-30 18:35:35.877 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
-[INFO] 2025-05-30 18:35:35.889 [main] TestNGListeners - Test case createOrder passed
-[INFO] 2025-05-30 18:35:35.923 [main] TestNGListeners - Test Execution finished
-[INFO] 2025-05-30 18:35:42.177 [main] TerminalUtils - Command executed successfully: C:\Users\Mostafa.AbdelShafy\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
-[INFO] 2025-05-30 18:35:42.177 [main] AllureUtils - Allure report generated successfully on Windows
-[INFO] 2025-05-30 18:35:42.247 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-05-30-18-35-42.html".
-[INFO] 2025-05-30 18:35:42.677 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-05-30-18-35-42.html
->>>>>>> 3c3056b1224ce36c5c629bbf90c2802d11a8b4e1
+[INFO] 2025-06-08 15:13:42.817 [main] DriverManager - Driver created on:  Edge
+[INFO] 2025-06-08 15:13:47.350 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/auth/login
+[DEBUG] 2025-06-08 15:13:47.791 [main] CompiledPath - Evaluating path: $['login-credentials']['username']
+[INFO] 2025-06-08 15:13:47.819 [main] JsonUtils - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'Account@1.com'
+[DEBUG] 2025-06-08 15:13:48.316 [main] CompiledPath - Evaluating path: $['login-credentials']['password']
+[INFO] 2025-06-08 15:13:48.320 [main] JsonUtils - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'Mnbvcxz@2'
+[INFO] 2025-06-08 15:13:49.935 [main] BrowserActions - Current URL https://test.dhub.pro/#/auth/login
+[ERROR] 2025-06-08 15:13:50.571 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:13:50.584 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:13:51.229 [main] TestNGListeners - Test case loginTest passed
+[DEBUG] 2025-06-08 15:13:51.315 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['name']
+[INFO] 2025-06-08 15:13:51.315 [main] JsonUtils - Json path: 'customer-names.user1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+[DEBUG] 2025-06-08 15:13:51.315 [main] CompiledPath - Evaluating path: $['customer-names']['user1']['phoneNumber']
+[INFO] 2025-06-08 15:13:51.315 [main] JsonUtils - Json path: 'customer-names.user1.phoneNumber' in the json file: 'test-data' has value: '97348900'
+[DEBUG] 2025-06-08 15:13:51.315 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['name']
+[INFO] 2025-06-08 15:13:51.319 [main] JsonUtils - Json path: 'customer-names.user2.name' in the json file: 'test-data' has value: 'Sauce Labs Bike Light'
+[DEBUG] 2025-06-08 15:13:51.319 [main] CompiledPath - Evaluating path: $['customer-names']['user2']['phoneNumber']
+[INFO] 2025-06-08 15:13:51.319 [main] JsonUtils - Json path: 'customer-names.user2.phoneNumber' in the json file: 'test-data' has value: '97895644'
+[DEBUG] 2025-06-08 15:13:51.319 [main] CompiledPath - Evaluating path: $['file-upload']['filePath']
+[INFO] 2025-06-08 15:13:51.319 [main] JsonUtils - Json path: 'file-upload.filePath' in the json file: 'test-data' has value: 'src/test/resources/testData/UpdateLocationPerformance Report.pdf'
+[INFO] 2025-06-08 15:13:51.408 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app
+[INFO] 2025-06-08 15:13:51.411 [main] HomePage - Clicking on Create order
+[INFO] 2025-06-08 15:13:55.349 [main] HomePage - Filling the pickup task form
+[INFO] 2025-06-08 15:14:42.231 [main] HomePage - Filling the delivery task form
+[INFO] 2025-06-08 15:14:55.621 [main] HomePage - Clicking on Creating Task Button
+[ERROR] 2025-06-08 15:14:55.815 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:14:55.815 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:14:55.864 [main] TestNGListeners - Test case createOrder passed
+[INFO] 2025-06-08 15:14:59.057 [main] ListViewPage - Actual value: #33248
+[INFO] 2025-06-08 15:14:59.058 [main] ListViewPage - Clicking on List View Button
+[INFO] 2025-06-08 15:14:59.332 [main] ListViewPage - Navigating to List View Page
+[INFO] 2025-06-08 15:14:59.409 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/tasks
+[INFO] 2025-06-08 15:15:01.418 [main] ListViewPage - Actual value: 33248
+[INFO] 2025-06-08 15:15:01.419 [main] ListViewPage - Validating order ID...
+[INFO] 2025-06-08 15:15:01.441 [main] ListViewPage - ✅ Order ID matched
+[ERROR] 2025-06-08 15:15:01.441 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:15:01.441 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:15:01.473 [main] TestNGListeners - Test case listViewPage passed
+[DEBUG] 2025-06-08 15:15:01.510 [main] CompiledPath - Evaluating path: $['dates']['year']
+[INFO] 2025-06-08 15:15:01.517 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: '2025'
+[DEBUG] 2025-06-08 15:15:01.517 [main] CompiledPath - Evaluating path: $['dates']['month']
+[INFO] 2025-06-08 15:15:01.517 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: 'May'
+[DEBUG] 2025-06-08 15:15:01.517 [main] CompiledPath - Evaluating path: $['dates']['day']
+[INFO] 2025-06-08 15:15:01.517 [main] JsonUtils - Json path: 'dates.day' in the json file: 'test-data' has value: '5'
+[INFO] 2025-06-08 15:15:02.400 [main] P03_DashboardPage - Navigating to dashboard page
+[INFO] 2025-06-08 15:15:02.521 [main] BrowserActions - Navigated to URL:  https://test.dhub.pro/#/app/settings/merchant-dashboard
+[ERROR] 2025-06-08 15:15:08.849 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:15:08.860 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:15:08.869 [main] TestNGListeners - Test case filterByDateTest passed
+[DEBUG] 2025-06-08 15:15:08.888 [main] CompiledPath - Evaluating path: $['dates']['year']
+[INFO] 2025-06-08 15:15:08.889 [main] JsonUtils - Json path: 'dates.year' in the json file: 'test-data' has value: '2025'
+[ERROR] 2025-06-08 15:15:10.946 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:15:10.946 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:15:10.968 [main] TestNGListeners - Test case filterByYearTest passed
+[DEBUG] 2025-06-08 15:15:10.972 [main] CompiledPath - Evaluating path: $['dates']['month']
+[INFO] 2025-06-08 15:15:10.976 [main] JsonUtils - Json path: 'dates.month' in the json file: 'test-data' has value: 'May'
+[ERROR] 2025-06-08 15:15:13.844 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:15:13.847 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:15:13.855 [main] TestNGListeners - Test case filterByMonthTest passed
+[ERROR] 2025-06-08 15:15:15.831 [main] ScreenshotsUtils - Failed to take screenshot: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
+[ERROR] 2025-06-08 15:15:15.845 [main] AllureUtils - Failed to attach logs to Allure report: test-outputs\Logs\logs
+[INFO] 2025-06-08 15:15:15.874 [main] TestNGListeners - Test case openReportsModuleTest passed
+[INFO] 2025-06-08 15:15:15.998 [main] TestNGListeners - Test Execution finished
+[INFO] 2025-06-08 15:15:21.115 [main] TerminalUtils - Command executed successfully: C:\Users\FAST\scoop\apps\allure\current\bin\allure.bat generate test-outputs/allure-results -o test-outputs/allure-report --clean --single-file
+[INFO] 2025-06-08 15:15:21.115 [main] AllureUtils - Allure report generated successfully on Windows
+[INFO] 2025-06-08 15:15:21.130 [main] FilesUtils - Target File Path: "test-outputs\allure-report\index.html", file was renamed to "Report_2025-06-08-15-15-21.html".
+[INFO] 2025-06-08 15:15:22.009 [main] TerminalUtils - Command executed successfully: cmd.exe /c start test-outputs/allure-report\Report_2025-06-08-15-15-21.html
