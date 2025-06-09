@@ -1,6 +1,26 @@
 # DeliveryHub Automation Framework
 
-A robust test automation framework built with Selenium WebDriver, TestNG, and Maven for automated testing of web applications.
+This is a **Hybrid Test Automation Framework** with the following characteristics:
+
+**Page Object Model (POM)**
+Clear separation of pages (LoginPage, DashboardPage, etc.) from test logic.
+
+**Modular Utilities**
+Reusable utility classes (BrowserActions, ElementActions, ScreenshotsUtils) indicate a modular design.
+
+**TestNG Integration**
+Presence of TestNGListeners confirms TestNG as the test runner.
+
+**Allure Reporting**
+AllureUtils suggests integration with Allure for advanced reporting.
+
+**Cross-Browser Support**
+BrowserFactory with Chrome/Edge/Firefox implementations shows multi-browser capability.
+
+**Soft Assertions**
+CustomSoftAssertion class enables non-hard-failure validations.
+
+
 
 ## Features
 
