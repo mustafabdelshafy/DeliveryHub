@@ -11,8 +11,25 @@ public class ElementActions {
         Waits.waitForElementVisible(driver, locator);
         WebElement element = driver.findElement(locator);
         Scrolling.scrollToElement(driver, element);
+
+        // 🧹 Clear any existing text
+        try {
+            element.clear();
+
+            // ⏳ Sometimes clear() doesn't remove all content, so force it
+            if (!element.getAttribute("value").isEmpty()) {
+                element.sendKeys(Keys.CONTROL + "a");
+                element.sendKeys(Keys.DELETE);
+            }
+        } catch (Exception e) {
+            // Fallback to JS if needed
+            ((JavascriptExecutor) driver).executeScript("arguments[0].value = '';", element);
+        }
+
+        // 📝 Send new data
         element.sendKeys(data);
     }
+
     @Step("Uploading file: {filePath} to the input: {locator}")
     public static void uploadFile(WebDriver driver, By locator, String filePath) {
         WebElement fileInput = findElement(driver, locator);

@@ -14,15 +14,22 @@ public class BrowserFactory {
     private BrowserFactory() {}
 
     public static WebDriver getBrowser(String browserName) {
+        if (browserName == null) {
+            throw new IllegalArgumentException("❌ browserName is null. Please check your config.properties.");
+        }
+
         switch (browserName.toLowerCase()) {
             case "chrome":
                 return new ChromeDriver(getChromeOptions());
             case "firefox":
                 return new FirefoxDriver(getFirefoxOptions());
-            default:
+            case "edge":
                 return new EdgeDriver(getEdgeOptions());
+            default:
+                throw new IllegalArgumentException("❌ Unsupported browser: " + browserName + ". Supported: chrome, firefox, edge.");
         }
     }
+
 
     private static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();

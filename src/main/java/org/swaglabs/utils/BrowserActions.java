@@ -3,6 +3,8 @@ package org.swaglabs.utils;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class BrowserActions {
     public BrowserActions(WebDriver driver){}
     @Step("Navigate to URL: {url}")
@@ -11,6 +13,14 @@ public class BrowserActions {
         driver.get(url);
         LogsUtil.info("Navigated to URL: ",url);
     }
+    @Step("Waiting until the page is fully loaded")
+    public static void waitUntilPageLoaded(WebDriver driver) {
+        new org.openqa.selenium.support.ui.WebDriverWait(driver, Duration.ofSeconds(30)).until(
+                webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
+                        .executeScript("return document.readyState").equals("complete")
+        );
+    }
+
 
     // Get current URL
     @Step("Get Current URL")

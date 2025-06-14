@@ -25,6 +25,7 @@ public class E2e {
     private P03_DashboardPage dashboardPage;
     private ReportsPage reportsPage;
     private ListViewPage listViewPage;
+    private EditOrder editOrderPage;
 
     @BeforeClass
     public void setUp() {
@@ -35,6 +36,7 @@ public class E2e {
         dashboardPage = new P03_DashboardPage(driver);
         reportsPage=new ReportsPage(driver);
         listViewPage=new ListViewPage(driver);
+        editOrderPage=new EditOrder(driver);
 
     }
 
@@ -108,6 +110,24 @@ public class E2e {
         reportsPage.openReportsSection();
 
     }
+    @Test(priority = 8, dependsOnMethods = "loginTest", description = "Edit Order")
+    public void editOrderTest() {
+        String customerName3 = testData.getJsonData("customer-names.user3.name");
+        String customerPhone3 = testData.getJsonData("customer-names.user3.phoneNumber");
+        String customerName4 = testData.getJsonData("customer-names.user4.name");
+        String customerPhone4 = testData.getJsonData("customer-names.user4.phoneNumber");
+
+        // Step 1: Navigate to List View and get order ID
+        listViewPage.NavigateToListView().clickListView();
+        String orderId = listViewPage.getOrderIdListView();
+
+        // Step 2: Navigate to Edit Order Page using the extracted order ID
+        editOrderPage.navigateToEditOrderPage(orderId)
+                .editPickupTask(customerName3, customerPhone3)
+                .editDeliveryTask(customerName4, customerPhone4)
+                .clickUpdateTaskButton();
+    }
+
 
 
     // Clean up:

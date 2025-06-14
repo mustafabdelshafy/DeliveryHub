@@ -15,11 +15,13 @@ public class DriverManager {
 
     @Step("Create driver instance on: {browserName}")
     public static WebDriver createInstance(String browserName) {
+        System.out.println("🧪 Launching browser: " + browserName); // Debug
         WebDriver driver = BrowserFactory.getBrowser(browserName);
         LogsUtil.info("Driver created on: ", browserName);
         setDriver(driver);
         return getDriver();
     }
+
 
     public static WebDriver getDriver() {
         if (driverThreadLocal.get() == null) {

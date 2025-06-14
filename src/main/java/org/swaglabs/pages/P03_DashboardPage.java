@@ -2,10 +2,7 @@ package org.swaglabs.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.swaglabs.utils.BrowserActions;
-import org.swaglabs.utils.ElementActions;
-import org.swaglabs.utils.LogsUtil;
-import org.swaglabs.utils.PropertiesUtils;
+import org.swaglabs.utils.*;
 
 public class P03_DashboardPage {
     private WebDriver driver;
@@ -24,12 +21,16 @@ public class P03_DashboardPage {
     private final By selectDayOption = By.xpath("//mat-option[.//span[normalize-space()='Day']]");
 
     // Actions
-  public P03_DashboardPage openDashboard() {
+    public P03_DashboardPage openDashboard() {
         ElementActions.clickElement(driver, sideMenuIcon);
         ElementActions.clickElement(driver, dashboardOption);
-        //navigateToDashboard();
+
+        // الأفضل: استنى لعنصر بيدل إن الصفحة الجديدة ظهرت
+        Waits.waitForElementVisible(driver, dropdown); // أو dashboardLoadedIndicator لو عندك
+
         return this;
     }
+
     public P03_DashboardPage navigateToDashboard() {
         //openDashboard();
         LogsUtil.info("Navigating to dashboard page");
