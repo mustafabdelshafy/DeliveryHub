@@ -21,6 +21,8 @@
         <gsonVersion>2.12.1</gsonVersion>
         <javafakerVersion>1.0.2</javafakerVersion>
         <allureVersion>2.29.1</allureVersion>
+        <env>staging</env>
+
     </properties>
 
     <build>
@@ -31,13 +33,26 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
                 <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/testng/testng-runner.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <env>${env}</env>
+                    </systemPropertyVariables>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"
                     </argLine>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
         </plugins>
     </build>
+
 
     <dependencies>
         <dependency>

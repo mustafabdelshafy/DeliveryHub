@@ -10,13 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Waits {
-    //present - visible - clickable
-    private Waits ()
-    {
+    private Waits() {}
 
-    }
-
-    //wait for element to be present
     public static WebElement waitForElementPresent(WebDriver driver, By locator) {
         try {
             return new WebDriverWait(driver, Duration.ofSeconds(30))
@@ -27,26 +22,52 @@ public class Waits {
         }
     }
 
-    /*public static WebElement waitForElementPresent(WebDriver driver, By locator) {
-        return new WebDriverWait(driver, Duration.ofSeconds(30)).
-                until(driver1 -> driver1.findElement(locator));
-    }*/
-
-    // wait for element to be visible
     public static WebElement waitForElementVisible(WebDriver driver, By locator) {
-        return new WebDriverWait(driver, Duration.ofSeconds(30)).
-                until(driver1 -> {
+        return new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(driver1 -> {
                     WebElement element = waitForElementPresent(driver, locator);
                     return element.isDisplayed() ? element : null;
                 });
     }
 
-    // wait for element to be clickable
     public static WebElement waitForElementClickable(WebDriver driver, By locator) {
-        return new WebDriverWait(driver, Duration.ofSeconds(15))
-                .until(driver1 -> {
-                    WebElement element = waitForElementVisible(driver, locator);
-                    return element.isEnabled() ? element : null;
+        try {
+            return new WebDriverWait(driver, Duration.ofSeconds(15))
+                    .until(ExpectedConditions.elementToBeClickable(locator));
+        } catch (TimeoutException e) {
+            LogsUtil.error("❌ Element not clickable after 15s: " + locator);
+            throw e;
+        }
+    }
+
+
+    public static void waitForTextToChange(WebDriver driver, By locator, String oldText) {
+        LogsUtil.info("⏳ Waiting for text to change from: " + oldText);
+        new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(d -> {
+                    try {
+                        String currentText = d.findElement(locator).getText().trim();
+                        LogsUtil.info("🔁 Current text: " + currentText);
+                        return !currentText.equals(oldText);
+                    } catch (Exception e) {
+                        return false;
+                    }
                 });
+        LogsUtil.info("✅ Text changed successfully");
+    }
+
+    public static void waitForNewTextToAppear(WebDriver driver, By locator, String previousText) {
+        LogsUtil.info("⏳ Waiting for new text to appear...");
+        new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(d -> {
+                    try {
+                        String currentText = d.findElement(locator).getText().trim();
+                        LogsUtil.info("🔁 Checking current text: " + currentText);
+                        return previousText == null || !currentText.equals(previousText);
+                    } catch (Exception e) {
+                        return previousText == null;
+                    }
+                });
+        LogsUtil.info("✅ New text appeared successfully");
     }
 }

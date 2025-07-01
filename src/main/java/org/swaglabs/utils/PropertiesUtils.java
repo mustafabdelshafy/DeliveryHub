@@ -17,26 +17,31 @@ public class PropertiesUtils {
     public static Properties loadProperties() {
         try {
             Properties properties = new Properties();
-            Collection<File> propertiesFilesList;
-            propertiesFilesList = FileUtils.listFiles(new File(PROPERTIES_PATH), new String[]{"properties"}, true);
-            propertiesFilesList.forEach(propertyFile -> {
-                try {
-                    properties.load(new FileInputStream(propertyFile));
-                } catch (IOException ioe) {
-                    LogsUtil.error(ioe.getMessage());
-                }
-                properties.putAll(System.getProperties());
-                System.getProperties().putAll(properties);
-            });
-            LogsUtil.info("Loading Properties File Data");
+            String env = System.getProperty("env", "staging");
+            String envFile = PROPERTIES_PATH + "environment-" + env + ".properties";
+            String webFile = PROPERTIES_PATH + "web.properties";
+
+            try (FileInputStream envInput = new FileInputStream(envFile)) {
+                properties.load(envInput);
+            }
+
+            // 🆕 تحميل إعدادات web.properties أيضًا
+            try (FileInputStream webInput = new FileInputStream(webFile)) {
+                properties.load(webInput);
+            }
+
+            properties.putAll(System.getProperties());
+            System.getProperties().putAll(properties);
+
+            LogsUtil.info("Loaded environment properties for: " + env);
             return properties;
         } catch (Exception e) {
-            LogsUtil.error("Failed to Load Properties File Data because: " + e.getMessage());
+            LogsUtil.error("Failed to Load Environment Properties File: " + e.getMessage());
             return null;
         }
     }
 
- // Get the value of the property
+    // Get the value of the property
     public static String getPropertyValue(String key) {
 
         try {

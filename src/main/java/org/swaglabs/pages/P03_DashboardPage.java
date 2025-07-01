@@ -1,6 +1,7 @@
 package org.swaglabs.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.swaglabs.utils.*;
 
@@ -24,19 +25,22 @@ public class P03_DashboardPage {
     public P03_DashboardPage openDashboard() {
         ElementActions.clickElement(driver, sideMenuIcon);
         ElementActions.clickElement(driver, dashboardOption);
-
-        // الأفضل: استنى لعنصر بيدل إن الصفحة الجديدة ظهرت
-        Waits.waitForElementVisible(driver, dropdown); // أو dashboardLoadedIndicator لو عندك
-
-        return this;
+        return waitUntilDashboardPageReady(); // ✅ استدعاء طريقة الانتظار هنا
     }
 
     public P03_DashboardPage navigateToDashboard() {
-        //openDashboard();
         LogsUtil.info("Navigating to dashboard page");
         BrowserActions.navigateToURL(driver, PropertiesUtils.getPropertyValue("dashboardURL"));
+        return waitUntilDashboardPageReady(); // ✅ استدعاء طريقة الانتظار هنا كمان
+    }
+
+    // ✅ الطريقة الموحدة للانتظار على تحميل صفحة الـ Dashboard
+    public P03_DashboardPage waitUntilDashboardPageReady() {
+        LogsUtil.info("Waiting until Dashboard Page is fully loaded...");
+        Waits.waitForElementVisible(driver, dropdown); // أو عنصر مميز آخر في الصفحة
         return this;
     }
+
 
     public P03_DashboardPage openCalendar() {
         ElementActions.clickElement(driver, calendarIcon);
@@ -81,6 +85,19 @@ public class P03_DashboardPage {
 
     private P03_DashboardPage openCalendarDropdown() {
         ElementActions.clickElement(driver, dropdown);
+
+        try {
+            // نحاول ننتظر عنصر Day Option بعد أول click
+            Waits.waitForElementVisible(driver, selectDayOption);
+        } catch (TimeoutException e) {
+            // لو فشل الظهور، نضغط مرة تانية وننتظر من تاني
+            LogsUtil.warn("Dropdown options didn't appear after first click, retrying...");
+            ElementActions.clickElement(driver, dropdown);
+            Waits.waitForElementVisible(driver, selectDayOption);
+        }
+
         return this;
     }
+
+
 }

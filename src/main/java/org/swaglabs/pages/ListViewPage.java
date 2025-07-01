@@ -16,18 +16,11 @@ public class ListViewPage {
     }
     //Locators
     private final By listView = By.xpath("//button[normalize-space(.)='List']");
-    private final By orderId=By.xpath("(//li[contains(@class, 'order-id')])[1]");
-    private final By orderIdListView=By.xpath("(//button//span[@class='mdc-button__label'])[6]");
+    private final By orderIdListView=By.xpath("(//button[.//span[contains(@class,'mdc-button__label')]]//span[contains(@class,'mdc-button__label')])[6]");
 
 
 
     //Actions
-    public String getOrderId()
-    {
-        String actualValue=ElementActions.getText(driver,orderId);
-        LogsUtil.info("Actual value: "+actualValue);
-        return actualValue;
-    }
     public String getOrderIdListView()
     {
         String actualValue=ElementActions.getText(driver,orderIdListView);

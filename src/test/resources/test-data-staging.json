@@ -1,0 +1,31 @@
+{
+  "login-credentials": {
+    "username": "demo@alsalam.com",
+    "password": "P@ssw0rd"
+  },
+  "customer-names": {
+    "user1": {
+      "name": "Sauce Labs Backpack",
+      "phoneNumber": "97348900",
+      "building": "455",
+      "floor": "2",
+      "flat": "9"
+    },
+    "user2": {
+      "name": "Sauce Labs Bike Light",
+      "phoneNumber": "97895644",
+      "building": "123",
+      "floor": "1",
+      "flat": "1"
+    }
+  },
+  "file-upload": {
+    "filePath": "src/test/resources/testData/UpdateLocationPerformance Report.pdf"
+  },
+  "dates": {
+    "day": "5",
+    "month": "May",
+    "year": "2025"
+  },
+  "confirmation-message": "Thank you for your order!"
+}
