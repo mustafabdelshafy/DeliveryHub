@@ -9,17 +9,18 @@ import org.swaglabs.utils.*;
 import java.time.Duration;
 
 public class EditOrder {
-// Constructor
-private String environment;
+    // Variables
+    private WebDriver driver;
+    private ListViewPage listViewPage=new ListViewPage(driver);
+    private String environment;
 
+    // Constructor
     public EditOrder(WebDriver driver) {
         this.driver = driver;
         this.environment = PropertiesUtils.getPropertyValue("env"); // أو استخدم system property
     }
-    // Variables
-    private WebDriver driver;
-    private ListViewPage listViewPage=new ListViewPage(driver);
 
+//Locators
     JsonUtils testData = new JsonUtils("test-data");
     private final By pickup=By.xpath("//mat-expansion-panel-header[contains(., 'Pick-up')]");
     private final By Delivery=By.xpath("//mat-panel-title[contains(., 'Delivery')]");
@@ -90,12 +91,9 @@ private String environment;
         return this;
     }
     // Method to fill address info for any task form (pickup/delivery/edit)
-    private void fillAddressInfo(By customerName1, String customerName,
-                                 By customerPhone1, String customerPhone,
-                                 By governorate1, By area1, By block1, By street1,
-                                 By building1, By floor1, By flat1) {
-
-        LogsUtil.info("Filling address information for task");
+    public EditOrder editPickupTask(String customerName, String customerPhone) {
+        LogsUtil.info("Editing the pickup task form");
+        ElementActions.clickElement(driver, pickup);
 
         ElementActions.sendData(driver, customerName1, customerName);
         ElementActions.sendData(driver, customerPhone1, customerPhone);
@@ -109,54 +107,38 @@ private String environment;
         ElementActions.clickElement(driver, block1);
         ElementActions.clickElement(driver, selectBlock);
 
-        ElementActions.clickElement(driver, street1);
+        ElementActions.clickElement(driver, Street1);
         ElementActions.clickElement(driver, selectStreet);
 
         ElementActions.sendData(driver, building1, "100");
         ElementActions.sendData(driver, floor1, "100");
         ElementActions.sendData(driver, flat1, "155");
-    }
-    public EditOrder editPickupTask(String customerName, String customerPhone) {
-        LogsUtil.info("Editing the pickup task form");
-        ElementActions.clickElement(driver, pickup);
-
-        fillAddressInfo(
-                customerName1, customerName,
-                customerPhone1, customerPhone,
-                governorate1, area1, block1, Street1,
-                building1, floor1, flat1
-        );
 
         return this;
     }
-
 
     public EditOrder editDeliveryTask(String customerName, String customerPhone) {
         LogsUtil.info("Editing the delivery task form");
         ElementActions.clickElement(driver, Delivery);
 
-        if (environment.equalsIgnoreCase("staging")) {
-            LogsUtil.info("Running in staging: Using pickup locators for delivery task");
-
-            fillAddressInfo(
-                    customerName1, customerName,
-                    customerPhone1, customerPhone,
-                    governorate1, area1, block1, Street1,
-                    building1, floor1, flat1
-            );
-        } else {
-            LogsUtil.info("Running in test: Using actual delivery locators");
-
-            fillAddressInfo(
-                    customerName2, customerName,
-                    customerPhone2, customerPhone,
-                    governorate2, area2, block2, Street2,
-                    building2, floor2, flat2
-            );
-        }
+        // ✅ تجاهل environment وامشي دايمًا على delivery locators
+        ElementActions.sendData(driver, customerName2, customerName);
+        ElementActions.sendData(driver, customerPhone2, customerPhone);
+        ElementActions.clickElement(driver, governorate2);
+        ElementActions.clickElement(driver, selectGovernorate);
+        ElementActions.clickElement(driver, area2);
+        ElementActions.clickElement(driver, selectArea);
+        ElementActions.clickElement(driver, block2);
+        ElementActions.clickElement(driver, selectBlock);
+        ElementActions.clickElement(driver, Street2);
+        ElementActions.clickElement(driver, selectStreet);
+        ElementActions.sendData(driver, building2, "100");
+        ElementActions.sendData(driver, floor2, "100");
+        ElementActions.sendData(driver, flat2, "155");
 
         return this;
     }
+
 
     public EditOrder clickUpdateTaskButton()
     {

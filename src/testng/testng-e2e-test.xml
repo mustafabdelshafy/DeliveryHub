@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Swaglabs E2E Test Suite - Test Environment">
+    <listeners>
+        <listener class-name="org.swaglabs.listeners.TestNGListeners"/>
+    </listeners>
+
+    <test name="Swaglabs E2E Tests - Test">
+        <classes>
+            <class name="com.swagles.tests.E2e">
+                <methods>
+                    <include name="loginTest"/>
+                    <include name="createOrder"/>
+                    <include name="listViewPage"/>
+                    <include name="createOrderRoundTrip"/>
+                    <include name="validateRoundTripOrderInList"/>
+                    <include name="assignOrder"/>
+                    <include name="filterByDateTest"/>
+                    <include name="filterByYearTest"/>
+                    <include name="filterByMonthTest"/>
+                    <include name="openReportsModuleTest"/>
+                    <include name="editOrderTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

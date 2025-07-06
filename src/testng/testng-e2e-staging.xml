@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Swaglabs E2E Test Suite">
+<suite name="Swaglabs E2E Test Suite - Staging Environment">
     <listeners>
         <listener class-name="org.swaglabs.listeners.TestNGListeners"/>
     </listeners>
 
-    <test name="Swaglabs E2E Tests">
+    <test name="Swaglabs E2E Tests - Staging">
         <classes>
             <class name="com.swagles.tests.E2e">
                 <methods>
-                    <!-- 1. Verify that user can login with valid credentials -->
                     <include name="loginTest"/>
-
-                    <!-- 2. Verify that user can create a pickup and delivery order -->
                     <include name="createOrder"/>
-
-                    <!-- 3. Verify that user can view the created order in list view -->
                     <include name="listViewPage"/>
-
-                    <!-- 4. Verify that user can filter calendar by date -->
+                    <include name="createOrderRoundTrip"/>
+                    <include name="validateRoundTripOrderInList"/>
+                    <include name="assignOrder"/>
                     <include name="filterByDateTest"/>
-
-                    <!-- 5. Verify that user can filter calendar by year -->
                     <include name="filterByYearTest"/>
-
-                    <!-- 6. Verify that user can filter calendar by month -->
                     <include name="filterByMonthTest"/>
-
-                    <!-- 7. Verify that user can Open Reports module -->
                     <include name="openReportsModuleTest"/>
-
-                    <!-- 8. Verify that user can Edit Order -->
                     <include name="editOrderTest"/>
                 </methods>
             </class>

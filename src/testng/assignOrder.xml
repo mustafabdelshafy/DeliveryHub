@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Only-Assign-Chain">
+    <test name="Assign‑Chain">
+        <classes>
+            <class name="com.swagles.tests.E2e">
+                <methods>
+                    <include name="loginTest"/>
+                    <include name="createOrder"/>
+                    <include name="assignOrder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
