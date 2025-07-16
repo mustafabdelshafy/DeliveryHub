@@ -14,12 +14,14 @@
                     <include name="listViewPage"/>
                     <include name="createOrderRoundTrip"/>
                     <include name="validateRoundTripOrderInList"/>
+                    <include name="editOrderTest"/>
                     <include name="assignOrder"/>
+                    <include name="verifyTaskIdExists"/>
                     <include name="filterByDateTest"/>
                     <include name="filterByYearTest"/>
                     <include name="filterByMonthTest"/>
                     <include name="openReportsModuleTest"/>
-                    <include name="editOrderTest"/>
+                    <include name="verifyTaskIdExistsInCompleted"/>
                 </methods>
             </class>
         </classes>

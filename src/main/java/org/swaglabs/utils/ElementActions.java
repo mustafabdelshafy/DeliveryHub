@@ -39,18 +39,73 @@ public class ElementActions {
 
         fileInput.sendKeys(filePath);
     }
-    @Step("Clicking on the element: {locator}")
-    public static void clickElement(WebDriver driver, By locator) {
+//    @Step("Clicking on the element: {locator}")
+//    public static void clickElement(WebDriver driver, By locator) {
+//        try {
+//            Waits.waitForElementClickable(driver, locator);
+//            WebElement element = driver.findElement(locator); // جلب العنصر مرة واحدة فقط
+//            Scrolling.scrollToElement(driver, element);       // تمرير نفس العنصر
+//            element.click();
+//        } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
+//            WebElement element = driver.findElement(locator); // fallback في حالة الخطأ
+//            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+//        }
+//    }
+@Step("Clicking on the element: {locator}")
+public static void clickElement(WebDriver driver, By locator) {
+    try {
+        // ⛔ انتظر اختفاء أي overlay قبل أي تفاعل
+        Waits.waitForOverlayToDisappear(driver);
+
+        // ⏳ انتظر حتى يكون العنصر قابل للنقر
+        WebElement element = Waits.waitForElementClickable(driver, locator);
+
+        // 🔽 Scroll للعنصر ليكون ظاهر
+        Scrolling.scrollToElement(driver, element);
+
         try {
-            Waits.waitForElementClickable(driver, locator);
-            WebElement element = driver.findElement(locator); // جلب العنصر مرة واحدة فقط
-            Scrolling.scrollToElement(driver, element);       // تمرير نفس العنصر
+            // 👆 محاولة بكليك عادي
             element.click();
-        } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
-            WebElement element = driver.findElement(locator); // fallback في حالة الخطأ
+            LogsUtil.info("✅ Element clicked successfully: " + locator);
+
+        } catch (WebDriverException e) {
+            // ⚠️ fallback لو الكليك العادي فشل لأي سبب
+            LogsUtil.warn("⚠️ Regular click failed for element: " + locator + ". Trying JavaScript click. Error: " + e.getMessage());
+
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+            LogsUtil.info("✅ Element clicked via JavaScript: " + locator);
+        }
+
+    } catch (Exception e) {
+        // 🛑 لو فيه مشكلة كبيرة زي إن العنصر مش موجود أصلاً
+        LogsUtil.error("❌ Failed to click on element: " + locator + ". Error: " + e.getMessage());
+        throw e;
+    }
+}
+
+    @Step("Forcibly clicking on the element via JavaScript: {locator}")
+    public static void forceClickElement(WebDriver driver, By locator) {
+        try {
+            // ⏳ تأكد إن مفيش overlay شغال يغطي العنصر
+            Waits.waitForOverlayToDisappear(driver);
+
+            // 🕵️‍♂️ تأكد إن العنصر موجود
+            WebElement element = Waits.waitForElementPresent(driver, locator);
+
+            // 🔽 Scroll عشان يكون ظاهر في الشاشة
+            Scrolling.scrollToElement(driver, element);
+
+            // 🖱️ نفّذ كليك بالـ JavaScript
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+            LogsUtil.info("✅ Forced JS click executed on: " + locator);
+
+        } catch (Exception e) {
+            LogsUtil.error("❌ Failed to force click element: " + locator + ". Error: " + e.getMessage());
+            throw e;
         }
     }
+
+
 
 
     @Step("Get Text from the Element: {locator}")

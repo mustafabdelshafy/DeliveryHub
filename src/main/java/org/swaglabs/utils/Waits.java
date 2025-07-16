@@ -70,4 +70,34 @@ public class Waits {
                 });
         LogsUtil.info("✅ New text appeared successfully");
     }
+    public static void waitForMatOptionClickable(WebDriver driver, By locator) {
+        LogsUtil.info("⏳ Waiting for mat-option to be clickable: " + locator);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        // تأكد إن العنصر ظاهر
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+        // تأكد إن عنصر البحث داخل الـ dropdown اختفى (لو موجود)
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                    By.cssSelector("input.mat-select-search-input")));
+        } catch (TimeoutException e) {
+            LogsUtil.warn("⚠️ Search input still visible. Proceeding anyway.");
+        }
+
+        // تأكد إن العنصر قابل للكليك فعلاً
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        LogsUtil.info("✅ mat-option is clickable: " + locator);
+    }
+    public static void waitForOverlayToDisappear(WebDriver driver) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(10))
+                    .until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".cdk-overlay-backdrop")));
+            LogsUtil.info("✅ Overlay/backdrop disappeared.");
+        } catch (TimeoutException e) {
+            LogsUtil.warn("⚠️ Overlay/backdrop still visible after timeout.");
+        }
+    }
+
+
 }

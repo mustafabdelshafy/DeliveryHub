@@ -29,6 +29,8 @@ private WebDriver driver;
     private final By driverDropdown=By.cssSelector("mat-select[formcontrolname='driverIds']");
     private final By selectDriver=By.xpath("(//mat-option[not(@aria-disabled='true')])[1]");
     private final By submitButton=By.xpath("//button[.//span[normalize-space()='Submit']]");
+    private final By clickOnAssignedTab=By.xpath("(//div[@role='tab'][.//span[contains(text(),'Assigned')]])[2]");
+
 
 
     //Actions
@@ -79,19 +81,30 @@ private WebDriver driver;
         ElementActions.clickElement(driver, submitButton);
         return this;
     }
-
-    public class OrderAssertions {
-
-        public static boolean isTaskIdPresent(WebDriver driver, String expectedTaskId) {
-            List<WebElement> allTaskIds = driver.findElements(
-                    By.xpath("//ul[@class='date-list']//h5[contains(text(), '#')]")
-            );
-
-            return allTaskIds.stream()
-                    .map(WebElement::getText)
-                    .anyMatch(text -> text.trim().equals(expectedTaskId));
-        }
+    public AssignOrder clickOnAssignedTab() {
+        LogsUtil.info("Clicking on Assigned Tab");
+        ElementActions.clickElement(driver, clickOnAssignedTab);
+        return this;
     }
+
+    public static boolean isTaskIdPresent(WebDriver driver, String expectedTaskId) {
+        // متغير جديد يحمل القيمة المعدّلة
+        String formattedTaskId = expectedTaskId.startsWith("#") ? expectedTaskId : "#" + expectedTaskId;
+
+        List<WebElement> allTaskIds = driver.findElements(
+                By.xpath("//ul[@class='date-list']//h5[contains(text(), '#')]")
+        );
+
+        System.out.println("Expected ID: " + formattedTaskId);
+        allTaskIds.forEach(e -> System.out.println("Found ID: " + e.getText()));
+
+        return allTaskIds.stream()
+                .map(e -> e.getText().trim())
+                .anyMatch(text -> text.equals(formattedTaskId));
+    }
+
+
+
 
 
 

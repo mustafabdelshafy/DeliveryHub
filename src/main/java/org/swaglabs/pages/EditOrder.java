@@ -102,9 +102,11 @@ public class EditOrder {
         ElementActions.clickElement(driver, selectGovernorate);
 
         ElementActions.clickElement(driver, area1);
+        Waits.waitForMatOptionClickable(driver, selectArea);
         ElementActions.clickElement(driver, selectArea);
 
         ElementActions.clickElement(driver, block1);
+        Waits.waitForMatOptionClickable(driver, selectBlock);
         ElementActions.clickElement(driver, selectBlock);
 
         ElementActions.clickElement(driver, Street1);

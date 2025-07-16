@@ -27,6 +27,8 @@ public class E2e {
     private ListViewPage listViewPage;
     private EditOrder editOrderPage;
     private AssignOrder assignorderPage;
+    private CompleteOrder completeOrderPage;
+    private RateOrderPage rateOrderPage;
     String environment;
 
     @BeforeClass
@@ -46,6 +48,8 @@ public class E2e {
         listViewPage = new ListViewPage(driver);
         editOrderPage = new EditOrder(driver);
         assignorderPage = new AssignOrder(driver);
+        completeOrderPage = new CompleteOrder(driver);
+        rateOrderPage = new RateOrderPage(driver);
     }
 
 
@@ -59,7 +63,7 @@ public class E2e {
                 .assertSuccessfulLoginSoft();
     }
 
-    @Test(priority = 2, dependsOnMethods = "loginTest", description = "Verify that user can create a pickup and delivery order")
+    @Test(priority = 2, dependsOnMethods = "loginTest", description = "Verify that user can create a pickup and delivery order with default branch")
     public void createOrder() {
         boolean isStaging = PropertiesUtils.getPropertyValue("env").equalsIgnoreCase("staging");
         String customerName1 = testData.getJsonData("customer-names.user1.name");
@@ -90,15 +94,13 @@ public class E2e {
         }
 
         try {
-            homePage.openDeliveryTask().fillDeliveryTask(customerName2, customerPhone2, filePath,isStaging)
+            homePage.openDeliveryTask().fillDeliveryTask(customerName2, customerPhone2, filePath, isStaging)
                     .clickCreateTaskButton();
         } catch (Exception e) {
             LogsUtil.error("❌ Failed to fill delivery: " + e.getMessage());
         }
-
         // ⏳ انتظر حتى يظهر Order ID جديد أو يتغيّر
         homePage.waitForOrderIdToChange(oldOrderId);
-
         // ✅ اقرأ Order ID الجديد وخزّنه
         String newOrderId = homePage.getOrderId().replace("#", "").trim();
         if (newOrderId == null || newOrderId.isEmpty()) {
@@ -108,6 +110,7 @@ public class E2e {
         LogsUtil.info("✅ Created order ID: " + newOrderId);
         RuntimeData.set("createdOrderId", newOrderId);
     }
+
     @Test(priority = 3, dependsOnMethods = "createOrder", description = "Verify that user can view the order in list view")
     public void listViewPage() {
         String createdOrderId = RuntimeData.get("createdOrderId");
@@ -120,7 +123,25 @@ public class E2e {
         listViewPage.validateorderId(createdOrderId, orderIdFromList, "❌ Order ID not matched");
     }
 
-    @Test(priority = 4, dependsOnMethods = "loginTest", description = "Verify that user can create a round-trip pickup and delivery order")
+    @Test(priority = 4, dependsOnMethods = "createOrder", description = "Verify that user can assign the created order to a driver")
+    public void assignOrder() {
+        assignorderPage.navigateToHomePage().openUnassignedTask().clickMoreOptionsIcon().clickAssignOrderButton()
+                .clickOnTeamDropdown().clickSelectTeam()
+                .clckOnDriverDropdown().clickSelectDriver().clickOnSubmitButton();
+
+    }
+
+    @Test(priority = 5, dependsOnMethods = "assignOrder", description = "Verify that the order exists in the assigned orders list")
+    public void verifyTaskIdExists() {
+        assignorderPage.clickOnAssignedTab();
+        String taskId = RuntimeData.get("createdOrderId");
+        ; // أو تجيبه من الـ RuntimeData
+
+        boolean found = AssignOrder.isTaskIdPresent(driver, taskId);
+        Validations.validateTrue(found, "Task ID not found in the list: " + taskId);
+    }
+
+    @Test(priority = 6, dependsOnMethods = "loginTest", description = "Verify that user can create a round-trip pickup and delivery order")
     public void createOrderRoundTrip() {
         String customerName1 = testData.getJsonData("customer-names.user1.name");
         String customerPhone1 = testData.getJsonData("customer-names.user1.phoneNumber");
@@ -149,7 +170,7 @@ public class E2e {
         }
 
         try {
-            homePage.openDeliveryTask().fillDeliveryTask(customerName2, customerPhone2, filePath,false)
+            homePage.openDeliveryTask().fillDeliveryTask(customerName2, customerPhone2, filePath, false)
                     .clickCreateTaskButton();
         } catch (Exception e) {
             LogsUtil.error("❌ Failed to fill delivery: " + e.getMessage());
@@ -168,30 +189,19 @@ public class E2e {
         LogsUtil.info("✅ Created round-trip order ID: " + newOrderId);
         RuntimeData.set("createdRoundTripOrderId", newOrderId);
     }
-    @Test(priority = 5, dependsOnMethods = "createOrderRoundTrip", description = "Verify that round-trip order appears correctly in list view")
+
+    @Test(priority = 7, dependsOnMethods = "createOrderRoundTrip", description = "Verify that round-trip order appears correctly in list view")
     public void validateRoundTripOrderInList() {
         String roundTripOrderId = RuntimeData.get("createdRoundTripOrderId");
 
         LogsUtil.info("🔍 Validating Round-Trip Order ID in List View: " + roundTripOrderId);
-
         listViewPage.clickListView()
                 .NavigateToListView();
-
         String orderIdFromList = listViewPage.getOrderIdListView().trim();
-
         listViewPage.validateorderId(roundTripOrderId, orderIdFromList, "❌ Round-trip Order ID not matched");
     }
 
-    @Test(priority = 6, dependsOnMethods = "createOrder", description = "Verify that user can assign the created order to a driver")
-    public void assignOrder()
-    {
-        assignorderPage.navigateToHomePage().openUnassignedTask().clickMoreOptionsIcon().clickAssignOrderButton()
-                .clickOnTeamDropdown().clickSelectTeam()
-                .clckOnDriverDropdown().clickSelectDriver().clickOnSubmitButton();
-
-    }
-
-    @Test(priority = 7, dependsOnMethods = "loginTest", description = "Verify calendar filter by date")
+    @Test(priority = 8, dependsOnMethods = "loginTest", description = "Verify calendar filter by date")
     public void filterByDateTest() {
         String year = testData.getJsonData("dates.year");
         String month = testData.getJsonData("dates.month");
@@ -203,39 +213,55 @@ public class E2e {
                 .selectCalendarMonth(month);
     }
 
-    @Test(priority = 8, dependsOnMethods = "loginTest", description = "Verify calendar filter by year")
+    @Test(priority = 9, dependsOnMethods = "loginTest", description = "Verify calendar filter by year")
     public void filterByYearTest() {
         String year = testData.getJsonData("dates.year");
         // dashboardPage.openDashboard();
         dashboardPage.selectCalendarYear(year);
     }
 
-    @Test(priority = 9, dependsOnMethods = "loginTest", description = "Verify calendar filter by month")
+    @Test(priority = 10, dependsOnMethods = "loginTest", description = "Verify calendar filter by month")
     public void filterByMonthTest() {
         String month = testData.getJsonData("dates.month");
         //  dashboardPage.openDashboard();
         dashboardPage.selectCalendarMonth(month);
     }
 
-    @Test(priority = 10, dependsOnMethods = "loginTest", description = "Open Reports module")
+    @Test(priority = 11, dependsOnMethods = "loginTest", description = "Open Reports module")
     public void openReportsModuleTest() {
         reportsPage.openReportsSection();
 
     }
-    @Test(priority = 11, dependsOnMethods = "loginTest", description = "Edit Order")
+
+    @Test(priority = 12, dependsOnMethods = "loginTest", description = "Verify that the user can Edit Unassigned Order")
     public void editOrderTest() {
         String customerName3 = testData.getJsonData("customer-names.user3.name");
         String customerPhone3 = testData.getJsonData("customer-names.user3.phoneNumber");
         String customerName4 = testData.getJsonData("customer-names.user4.name");
         String customerPhone4 = testData.getJsonData("customer-names.user4.phoneNumber");
 
-        listViewPage.NavigateToListView().clickListView();
-        String orderId = listViewPage.getOrderIdListView();
-
+        // listViewPage.NavigateToListView().clickListView();
+        // String orderId = listViewPage.getOrderIdListView();
+        String orderId = RuntimeData.get("createdRoundTripOrderId");
         editOrderPage.navigateToEditOrderPage(orderId);
         editOrderPage.editPickupTask(customerName3, customerPhone3);
         editOrderPage.editDeliveryTask(customerName4, customerPhone4)
                 .clickUpdateTaskButton();
+    }
+
+    @Test(priority = 13, dependsOnMethods = "loginTest", description = "Verify that the user can complete an order and verify that the exists in the Completed orders list")
+    public void verifyTaskIdExistsInCompleted() {
+        completeOrderPage.navigateToHomePage().clickOnAssignedTab().clickOnAssignedTask()
+                .clickMoreOptionsIcon().clickChangeStatusButton().clickStatusDropdown()
+                .selectSuccessfulStatus().clickToConnectedTasks().clickSubmitButton()
+                .closeTheTask().clickOnCompleteTab().validateOrderCompletion();
+    }
+
+    @Test(priority = 14, dependsOnMethods = "verifyTaskIdExistsInCompleted", description = "Verify that the user can rate the completed order")
+    public void rateOrder() {
+        rateOrderPage.clickOnSideMenue().clickOnSettings().clickOnLogs().
+                clickOnEyeDetails().openRateURL().switchToNewTab().clickOnStar(3).clickOnSubmitButton();
+
     }
 
 
